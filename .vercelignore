@@ -1,0 +1,8 @@
+README.md
+tests/
+*-verified.jpg
+.DS_Store
+.chrome_temp/
+.env*
+.vercel/
+.gitignore

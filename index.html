@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html lang="ru" data-current-slide="0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior IT — Интерактивный пробный урок</title>
+    
+    <!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css?v=20261028-onboarding2">
+    <link rel="stylesheet" href="platform-preview.css?v=20261028-onboarding2">
+    <link rel="stylesheet" href="platform-home.css?v=20261120-home1">
+    <link rel="stylesheet" href="practice-enhancements.css?v=20261028-orange1">
+    <link rel="stylesheet" href="course-program.css?v=20261118-program1">
+    <link rel="stylesheet" href="sky-bg.css?v=20261119-sky5">
+    <link rel="stylesheet" href="onboarding-polish.css?v=20261119-op33">
+    <link rel="stylesheet" href="map-slide.css?v=20261122-rev1">
+    <link rel="stylesheet" href="team-slide.css?v=20261122-rev1">
+    <link rel="stylesheet" href="transitions.css?v=20261121-fx2">
+    <link rel="stylesheet" href="island-slide.css?v=20261122-m1">
+    <link rel="stylesheet" href="maze-theme.css?v=20261122-sl5">
+</head>
+<body class="theme-bright">
+
+    <div class="sky-bg" aria-hidden="true">
+        <div class="sky-strip sky-far"><img src="images/sky/far.webp" alt="" decoding="async"><img src="images/sky/far.webp" alt="" decoding="async"><img src="images/sky/far.webp" alt="" decoding="async"><img src="images/sky/far.webp" alt="" decoding="async"></div>
+        <div class="sky-strip sky-mid"><img src="images/sky/mid.webp" alt="" decoding="async"><img src="images/sky/mid.webp" alt="" decoding="async"><img src="images/sky/mid.webp" alt="" decoding="async"><img src="images/sky/mid.webp" alt="" decoding="async"></div>
+        <img class="sky-cloud k1" src="images/sky/cloud1.webp" alt="" decoding="async">
+        <img class="sky-cloud k2" src="images/sky/cloud2.webp" alt="" decoding="async">
+        <img class="sky-cloud k3" src="images/sky/cloud3.webp" alt="" decoding="async">
+        <img class="sky-cloud k4" src="images/sky/cloud4.webp" alt="" decoding="async">
+        <img class="sky-cloud k5" src="images/sky/cloud5.webp" alt="" decoding="async">
+        <div class="sky-strip sky-fg"><img src="images/sky/fg.webp" alt="" decoding="async"><img src="images/sky/fg.webp" alt="" decoding="async"><img src="images/sky/fg.webp" alt="" decoding="async"><img src="images/sky/fg.webp" alt="" decoding="async"></div>
+    </div>
+
+    <!-- ======================================================================
+         TOP GAMIFIED HUD / HEADER
+         ====================================================================== -->
+    <header class="game-hud">
+        <div class="hud-left">
+            <!-- Social Proof Badge -->
+            <div class="hud-proof-tag">
+                <span class="pulse-green-dot"></span>
+                <span data-i18n="hud_online_students">2000+ учеников</span>
+            </div>
+
+            <span class="hud-step-tag" id="hud-step-tag">Шаг 1 из 8</span>
+        </div>
+
+        <div class="hud-brand" onclick="goToSlide(0)" title="На главную">
+                <img src="./images/junior_logo_white.webp" alt="Junior Academy" class="hud-brand-logo-img" height="34" width="auto">
+        </div>
+
+        <div class="hud-right">
+            <!-- Language Switcher -->
+            <div class="hud-lang-switch">
+                <button type="button" class="lang-btn active" data-lang="ru" onclick="setLanguage('ru')">RU</button>
+                <button type="button" class="lang-btn" data-lang="uz" onclick="setLanguage('uz')">UZ</button>
+            </div>
+
+            <!-- Sound Mute/Unmute Toggle -->
+            <button type="button" class="hud-sound-btn" id="btn-sound-toggle" onclick="toggleSound()" title="Включить/выключить звук">
+                <svg id="sound-svg-on" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+                <svg id="sound-svg-off" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         MAIN PRESENTATION STAGE (7 STEPS: 0 to 6)
+         ====================================================================== -->
+    <main class="presentation-stage-viewport">
+        
+        <!-- Left: Active Slide Deck -->
+        <section class="slide-deck-wrapper">
+
+            <!-- ==============================================================
+                 STEP 0: PROFILE (Age Selection & Nickname Minigame)
+                 ============================================================== -->
+            <article class="slide-card active" id="slide-0">
+                <div class="slide-main-col">
+                    <h1 class="step-title" data-i18n="s0_title">Добро пожаловать в <span class="highlight-orange">Junior IT</span>!</h1>
+                    <p class="step-desc" data-i18n="s0_sub">Давай настроим урок под тебя.</p>
+                    <fieldset class="onboarding-age-picker">
+                        <legend><img class="lg-ico" src="images/ui/icon-people.svg" alt="" width="30" height="30"><span data-i18n="age_question">Сколько тебе лет?</span></legend>
+                        <div class="onboarding-age-options">
+                            <label style="--art:url(images/ui/age-1.webp)"><input type="radio" name="lesson-age" value="kids" onchange="selectAgeCategory(this.value)"><img class="age-art" src="images/ui/age-1.webp" alt="" width="560" height="431" decoding="async"><span data-i18n="age_kids_title">8–10 лет</span></label>
+                            <label style="--art:url(images/ui/age-2.webp)"><input type="radio" name="lesson-age" value="juniors" onchange="selectAgeCategory(this.value)"><img class="age-art" src="images/ui/age-2.webp" alt="" width="551" height="560" decoding="async"><span data-i18n="age_juniors_title">11–13 лет</span></label>
+                            <label style="--art:url(images/ui/age-3.webp)"><input type="radio" name="lesson-age" value="teens" onchange="selectAgeCategory(this.value)"><img class="age-art" src="images/ui/age-3.webp" alt="" width="551" height="560" decoding="async"><span data-i18n="age_teens_title">14–17 лет</span></label>
+                        </div>
+                    </fieldset>
+                    <div class="onboarding-outcome age-outcome" id="age-outcome-box">
+                        <img class="lg-ico" src="images/ui/icon-target.svg" alt="" width="38" height="38">
+                        <div><strong data-i18n="age_step_title">Возраст ученика</strong>
+                        <p id="age-outcome" role="status" aria-live="polite"></p></div>
+                    </div>
+                </div>
+                <div class="slide-footer-row">
+                    <div id="age-hint" role="status" aria-live="polite"></div>
+                    <button type="button" id="age-next-btn" class="primary-big-btn cta-large" onclick="goToSlide(1)" disabled>
+                        <span data-i18n="btn_next_short">Далее</span>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 0b: SUBJECTS (one or several programs)
+                 ============================================================== -->
+            <article class="slide-card" id="slide-1">
+                <div class="slide-main-col">
+                    <h1 class="step-title" data-i18n="subj_title">Что <span class="highlight-orange">интересно</span> ученику?</h1>
+                    <p class="step-desc" data-i18n="subj_sub">Выбери один или несколько предметов — урок подстроится.</p>
+                    <div class="age-chip-row">
+                        <span class="age-chip"><span data-i18n="age_chip_label">Возраст:</span> <b id="age-chip-value">—</b></span>
+                    </div>
+                    <fieldset class="program-picker" id="program-picker">
+                        <legend><img decoding="async" loading="lazy" class="lg-ico" src="images/ui/icon-layers.svg" alt="" width="30" height="30"><span data-i18n="program_title">Какой курс тебе интересен?</span></legend>
+                        <p data-i18n="program_hint">Выбери одну программу. Английский есть в обеих.</p>
+                        <div class="program-options">
+                            <label class="program-option">
+                                <input type="checkbox" name="lesson-program" value="web">
+                                <img loading="lazy" class="program-art" src="images/ui/prog-web.webp" alt="" width="520" height="457" decoding="async">
+                                <span><strong data-i18n="program_web">Веб-программирование + английский</strong><small data-i18n="program_web_desc">Создавать сайты и понимать язык технологий</small></span>
+                            </label>
+                            <label class="program-option">
+                                <input type="checkbox" name="lesson-program" value="math">
+                                <img loading="lazy" class="program-art" src="images/ui/prog-math.webp" alt="" width="520" height="473" decoding="async">
+                                <span><strong data-i18n="program_math">Математика + английский</strong><small data-i18n="program_math_desc">Решать задачи и увереннее общаться</small></span>
+                            </label>
+                            <label class="program-option">
+                                <input type="checkbox" name="lesson-program" value="english">
+                                <img loading="lazy" class="program-art" src="images/ui/prog-english.webp" alt="" width="520" height="449" decoding="async">
+                                <span><strong data-i18n="program_english">Английский</strong><small data-i18n="program_english_desc">Говорить об играх, коде и мире технологий</small></span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="onboarding-outcome">
+                        <img decoding="async" loading="lazy" class="lg-ico" src="images/ui/icon-target.svg" alt="" width="38" height="38">
+                        <div><strong data-i18n="program_lesson_title">На пробном уроке</strong>
+                        <p id="program-outcome" role="status" aria-live="polite"></p></div>
+                    </div>
+                </div>
+                <div class="slide-footer-row">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(0)" data-i18n="btn_back">← Назад</button>
+                    <div id="start-hint" role="status" aria-live="polite"></div>
+                    <button type="button" id="start-adventure-btn" class="primary-big-btn cta-large" onclick="startAdventure()" disabled>
+                        <span data-i18n="s0_start_btn">Начать занятие</span>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 1: INTERESTS (Choose 3 Apps & Quiz)
+                 ============================================================== -->
+            <article class="slide-card" id="slide-2" data-map-view="map">
+                <div class="slide-main-col">
+                    <!-- Слайд 3: карта возможностей -->
+                    <section class="map-view map-view-main" aria-labelledby="map-title">
+                        <header class="map-head">
+                            <h2 class="map-title" id="map-title"><span data-m="title_a"></span> <em data-m="title_b"></em></h2>
+                            <p class="map-sub" data-m="sub"></p>
+                        </header>
+                        <div class="map-stage" id="map-stage" data-count="3">
+                            <img loading="lazy" class="map-kids" src="images/ui/map-kids.webp" alt="" width="720" height="727" decoding="async">
+                            <div class="map-island">
+                                <img loading="lazy" class="map-island-img" src="images/ui/map-island.webp" alt="" width="1500" height="701" decoding="async">
+                                <i class="map-veil" data-veil="web" style="--x:4%;--y:8%;--w:34%;--h:70%"></i><i class="map-veil" data-veil="math" style="--x:30%;--y:8%;--w:32%;--h:70%"></i><i class="map-veil" data-veil="english" style="--x:55%;--y:8%;--w:32%;--h:70%"></i>
+                                <span class="map-pin" data-pin="web" style="--x:20.9%;--y:24%"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="14" y1="5" x2="10" y2="19"/></svg><span class="sr" data-m="pin_web"></span></span><span class="map-pin" data-pin="math" style="--x:45.6%;--y:22.8%"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2.5"/><rect x="8" y="6" width="8" height="3.5" rx="1" fill="#fff" stroke="none"/><circle cx="9" cy="13" r=".9" fill="#fff"/><circle cx="12" cy="13" r=".9" fill="#fff"/><circle cx="15" cy="13" r=".9" fill="#fff"/><circle cx="9" cy="17" r=".9" fill="#fff"/><circle cx="12" cy="17" r=".9" fill="#fff"/><circle cx="15" cy="17" r=".9" fill="#fff"/></svg><span class="sr" data-m="pin_math"></span></span><span class="map-pin" data-pin="english" style="--x:68.3%;--y:26%"><span class="aa">Aa</span><span class="sr" data-m="pin_english"></span></span>
+                                <span class="map-pin-label" data-label="web" style="--x:19.5%" data-m="pin_web"></span><span class="map-pin-label" data-label="math" style="--x:45.6%" data-m="pin_math"></span><span class="map-pin-label" data-label="english" style="--x:70.5%" data-m="pin_english"></span>
+                            <div class="map-flag">
+                                <img loading="lazy" src="images/ui/map-flag.webp" alt="" width="340" height="332" decoding="async">
+                                <div class="map-flag-text"><b id="map-goal-flag"></b></div><i class="map-spark" style="--x:8%;--y:8%;--dx:-14px;--dy:-3px;--s:14px;--t:0"></i><i class="map-spark" style="--x:21%;--y:0%;--dx:-3px;--dy:-8px;--s:11px;--t:1"></i><i class="map-spark" style="--x:35%;--y:6%;--dx:14px;--dy:-5px;--s:15px;--t:2"></i><i class="map-spark" style="--x:39%;--y:20%;--dx:17px;--dy:4px;--s:10px;--t:3"></i><i class="map-spark" style="--x:4%;--y:22%;--dx:-15px;--dy:6px;--s:11px;--t:4"></i>
+                            </div>
+                            </div>
+                            
+                        </div>
+                        <div class="map-info">
+                            <div class="map-goal-card">
+                                <strong data-m="card_title"></strong>
+                                <p id="map-age-text"></p>
+                            </div>
+                            <div class="map-blocks"><div class="map-block map-block-1"><span class="map-block-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span><b id="map-c1-t"></b><p id="map-c1-p"></p></div><div class="map-block map-block-2"><span class="map-block-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/><polyline points="9 8 7 10 9 12"/><polyline points="15 8 17 10 15 12"/></svg></span><b id="map-c2-t"></b><p id="map-c2-p"></p></div><div class="map-block map-block-3"><span class="map-block-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></span><b id="map-c3-t"></b><p id="map-c3-p"></p></div></div>
+                        </div>
+                    </section>
+
+                    <div class="slide-footer-row map-footer">
+                        <button type="button" class="btn-secondary" id="map-back-btn" data-m="back"></button>
+                        <button type="button" class="primary-big-btn" id="map-next-btn">
+                            <span data-m="next"></span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </button>
+                    </div>
+
+                    <!-- Прежний выбор «Чем ты пользуешься каждый день?» сохранён в разметке, но вне сценария -->
+                    <div class="legacy-apps-step" hidden>
+                    <!-- Star Quest Counter Bar -->
+                    <div class="quest-star-bar">
+                        <div class="quest-star-label">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="#D97706">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                            <strong id="quest-counter-text">Выбрано: 0 из 3</strong>
+                        </div>
+                        <div class="quest-stars-row">
+                            <span class="star-slot" id="star-slot-1">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#CBD5E1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </span>
+                            <span class="star-slot" id="star-slot-2">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#CBD5E1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </span>
+                            <span class="star-slot" id="star-slot-3">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="#CBD5E1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- 3D Interactive Apps Grid with Vector Logos -->
+                    <div class="apps-bright-grid" id="apps-grid-container">
+                        
+                        <!-- 1. Roblox -->
+                        <div class="game-3d-card app-card" id="card-app-roblox" data-app="roblox" onclick="toggleApp(this, 'roblox', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_roblox.webp" alt="Roblox 3D" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_roblox">Roblox</strong>
+                                <small data-i18n="app_roblox_sub">Создавай 3D-миры на Lua</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                        <!-- 2. Minecraft -->
+                        <div class="game-3d-card app-card" id="card-app-minecraft" data-app="minecraft" onclick="toggleApp(this, 'minecraft', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_minecraft.webp" alt="Minecraft 3D" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_mine">Minecraft</strong>
+                                <small data-i18n="app_mine_sub">Строй алгоритмами</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                        <!-- 3. FIFA / Football -->
+                        <div class="game-3d-card app-card" id="card-app-fifa" data-app="fifa" onclick="toggleApp(this, 'fifa', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_fifa.webp" alt="FIFA Футбол" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_fifa">FIFA / Футбол</strong>
+                                <small data-i18n="app_fifa_sub">Физика и AI в играх</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                        <!-- 4. YouTube -->
+                        <div class="game-3d-card app-card" id="card-app-youtube" data-app="youtube" onclick="toggleApp(this, 'youtube', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_youtube.webp" alt="YouTube 3D" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_yt">YouTube</strong>
+                                <small data-i18n="app_yt_sub">Видео-платформы</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                        <!-- 5. TikTok -->
+                        <div class="game-3d-card app-card" id="card-app-tiktok" data-app="tiktok" onclick="toggleApp(this, 'tiktok', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_tiktok.webp" alt="TikTok 3D" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_tt">TikTok</strong>
+                                <small data-i18n="app_tt_sub">AI-алгоритмы контента</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                        <!-- 6. Instagram -->
+                        <div class="game-3d-card app-card" id="card-app-instagram" data-app="instagram" onclick="toggleApp(this, 'instagram', event)">
+                            <div class="app-icon-wrap">
+                                <img src="images/app_instagram.webp" alt="Instagram 3D" class="app-3d-thumb" loading="lazy" decoding="async" width="72" height="72">
+                            </div>
+                            <div class="app-card-info">
+                                <strong data-i18n="app_insta">Instagram</strong>
+                                <small data-i18n="app_insta_sub">Web & Mobile интерфейсы</small>
+                            </div>
+                            <div class="app-select-mark">✓</div>
+                        </div>
+
+                    </div>
+
+                    <!-- Insight Card: Programmers create everything you chose -->
+                    <div class="quiz-box-pop fact-insight-box hidden" id="m1-quiz-box">
+                        <div class="fact-insight-badge" data-i18n="s1_fact_tag">ВАЖНЫЙ ФАКТ</div>
+                        <div class="fact-insight-content">
+                            <div class="fact-avatar-wrap">
+                                <img src="images/quiz_programmer.webp" alt="Программист 3D" class="fact-3d-thumb" loading="lazy" decoding="async" width="80" height="80">
+                            </div>
+                            <div class="fact-text-col">
+                                <h3 class="fact-main-title" data-i18n="s1_fact_title">Всё, что вы выбрали, создают программисты!</h3>
+                                <p class="fact-sub-desc" data-i18n="s1_fact_desc">Игры, любимые приложения и сервисы — всё это код. В Junior IT ты научишься создавать такие же крутые проекты своими руками!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                    <button type="button" class="primary-big-btn hidden" id="btn-next-step-1" onclick="goToSlide(3)">
+                        <span data-i18n="s1_btn_next">Познакомиться с командой</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 2: TEAM (INTERACTIVE 3D PIXAR CHARACTERS & HIGH-FIVE)
+                 ============================================================== -->
+            <article class="slide-card" id="slide-3">
+                <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+                        <symbol id="tm-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6.5 2.5 12 8 17.5"/><polyline points="16 6.5 21.5 12 16 17.5"/><line x1="14" y1="4.5" x2="10" y2="19.5"/></symbol>
+                        <symbol id="tm-rocket" viewBox="0 0 24 24"><path d="M12 1.5c4.2 2.2 6.3 6.2 6 10.8l-3 3.7H9l-3-3.7c-.3-4.6 1.8-8.6 6-10.8z" fill="currentColor"/><circle cx="12" cy="9" r="2.3" fill="#fff"/><path d="M9 15.5l-3.8 4.5 5-1.2zM15 15.5l3.8 4.5-5-1.2z" fill="#ffb64d"/><path d="M10.4 18.6c0 2.2 1.6 3.4 1.6 3.4s1.6-1.2 1.6-3.4z" fill="#ffd45e"/></symbol>
+                        <symbol id="tm-chart" viewBox="0 0 24 24" fill="currentColor"><rect x="2.5" y="13" width="5.5" height="8" rx="1.4" opacity=".6"/><rect x="9.3" y="8" width="5.5" height="13" rx="1.4" opacity=".8"/><rect x="16" y="2.5" width="5.5" height="18.5" rx="1.4"/></symbol>
+                        <symbol id="tm-crown" viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 7.5l5 4.2L12 4l4.5 7.7 5-4.2-2 11H4.5l-2-11z"/><rect x="4.5" y="20" width="15" height="2.2" rx="1.1"/></symbol>
+                        <symbol id="tm-chat" viewBox="0 0 24 24"><path d="M5 3.5h14a3 3 0 013 3v8a3 3 0 01-3 3h-7l-5.5 4v-4H5a3 3 0 01-3-3v-8a3 3 0 013-3z" fill="currentColor"/><circle cx="7.6" cy="10.5" r="1.4" fill="#fff"/><circle cx="12" cy="10.5" r="1.4" fill="#fff"/><circle cx="16.4" cy="10.5" r="1.4" fill="#fff"/></symbol>
+                        <symbol id="tm-cal" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="17.5" rx="3.2" fill="currentColor"/><rect x="6.5" y="1.8" width="2.4" height="5" rx="1.2" fill="currentColor" stroke="#fff" stroke-width="1"/><rect x="15.1" y="1.8" width="2.4" height="5" rx="1.2" fill="currentColor" stroke="#fff" stroke-width="1"/><g fill="#fff"><rect x="6" y="10" width="3.2" height="3" rx=".8"/><rect x="10.4" y="10" width="3.2" height="3" rx=".8"/><rect x="14.8" y="10" width="3.2" height="3" rx=".8"/><rect x="6" y="14.8" width="3.2" height="3" rx=".8"/><rect x="10.4" y="14.8" width="3.2" height="3" rx=".8"/></g></symbol>
+                        <symbol id="tm-heart" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s-9-5.8-9-12.2A5.2 5.2 0 0112 6.5a5.2 5.2 0 019 3.3C21 16.2 12 22 12 22z"/></symbol>
+                </defs></svg>
+                <div class="slide-main-col">
+                    <div class="team-head">
+                        <h2 class="team-title"><span class="team-title-spark l" aria-hidden="true"><i></i><i></i><i></i></span><span data-t="title_a"></span> <b data-t="title_b"></b><span class="team-title-spark r" aria-hidden="true"><i></i><i></i><i></i></span></h2>
+                        <p class="team-sub" data-t="sub"></p>
+                    </div>
+                    <div class="team-grid">
+                        <div class="team-card team-mentor" id="team-mentor" role="group">
+                            <div class="team-pic">
+                                <span class="team-blob" aria-hidden="true"></span>
+                                <img src="images/ui/team-mentor.webp" width="415" height="560" alt="" loading="lazy" decoding="async">
+                            </div>
+                            <span class="team-spark" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <div class="team-body">
+                                <div class="team-badge"><span class="team-ico"><svg aria-hidden="true"><use href="#tm-crown"/></svg></span><div><strong data-t="m_name"></strong><small data-t="m_role"></small></div></div>
+                                <ul class="team-list">
+                                    <li style="--i:0"><svg aria-hidden="true"><use href="#tm-code"/></svg><span data-t="m1"></span></li>
+                                    <li style="--i:1"><svg aria-hidden="true"><use href="#tm-rocket"/></svg><span data-t="m2"></span></li>
+                                    <li style="--i:2"><svg aria-hidden="true"><use href="#tm-chart"/></svg><span data-t="m3"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="team-card team-curator" id="team-curator" role="group">
+                            <div class="team-pic">
+                                <span class="team-blob" aria-hidden="true"></span>
+                                <img src="images/ui/team-curator.webp" width="413" height="560" alt="" loading="lazy" decoding="async">
+                            </div>
+                            <span class="team-spark" aria-hidden="true"><i></i><i></i><i></i></span>
+                            <div class="team-body">
+                                <div class="team-badge"><span class="team-ico"><svg aria-hidden="true"><use href="#tm-chat"/></svg></span><div><strong data-t="c_name"></strong><small data-t="c_role"></small></div></div>
+                                <ul class="team-list">
+                                    <li style="--i:0"><svg aria-hidden="true"><use href="#tm-chat"/></svg><span data-t="c1"></span></li>
+                                    <li style="--i:1"><svg aria-hidden="true"><use href="#tm-cal"/></svg><span data-t="c2"></span></li>
+                                    <li style="--i:2"><svg aria-hidden="true"><use href="#tm-heart"/></svg><span data-t="c3"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-footer-row team-footer">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(2)" data-i18n="btn_back">← Назад</button>
+                    <button type="button" class="primary-big-btn" onclick="goToSlide(4)">
+                        <span data-t="next"></span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 3: ECOSYSTEM — FULL INTERACTIVE LMS DASHBOARD
+                 Recreated 1:1 from Junior IT LMS Dashboard with Glassmorphism
+                 ============================================================== -->
+            <article class="slide-card" id="slide-4">
+                <div class="slide-main-col">
+                    <div class="step-header-row">
+                        <div>
+                            <span class="step-badge" data-i18n="s4_badge">ЭКОСИСТЕМА</span>
+                            <h2 class="step-title" data-i18n="s4_title">Где и как проходят занятия?</h2>
+                            <p class="step-desc" data-i18n="s4_desc">Твои задания, курсы, прогресс и помощь ментора — на одной платформе. Давай посмотрим, как всё устроено!</p>
+                        </div>
+                        <button type="button" class="skip-btn" onclick="goToSlide(5)" data-i18n="btn_skip">Пропустить</button>
+                    </div>
+
+                    <section id="platform-preview" class="platform-preview" aria-label="Junior LMS"></section>
+
+                </div>
+
+                <div class="slide-footer-row">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(3)" data-i18n="btn_back">← Назад</button>
+                    <button type="button" class="primary-big-btn" onclick="goToSlide(5)">
+                        <span data-i18n="s3_btn_next">Перейти к практике</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 4: PRACTICE — REAL PLAYABLE MINI-GAMES
+                 ============================================================== -->
+            <article class="slide-card" id="slide-5">
+                <div class="slide-main-col">
+                    <!-- Слайд 6: «Острова». Выбор острова = выбор игры (island-game.js). Прежняя практика сохранена ниже в скрытом блоке. -->
+                    <div id="island-stage" class="ig-stage">
+                        <header class="ig-head">
+                            <h2 class="ig-title"><span data-ig="title_a"></span> <em data-ig="title_b"></em></h2>
+                            <p class="ig-sub" data-ig="sub"></p>
+                            <div class="ig-stars-pill" id="ig-stars-pill"><span class="ig-pill-star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z"/></svg></span><b id="ig-star-count">0</b></div>
+                        </header>
+                        <div class="ig-islands">
+                        <img class="sc-far" src="images/scene/scene-far.webp" alt="" width="1600" height="538" decoding="async">
+                        <img class="sc-paths" src="images/scene/scene-paths.webp" alt="" width="1400" height="465" decoding="async">
+                        <img class="sc-boy" src="images/scene/scene-boy.webp" alt="" width="640" height="718" decoding="async">
+                        <img class="sc-ground" src="images/scene/scene-ground.webp" alt="" width="1600" height="483" decoding="async">
+                        <button type="button" class="ig-island" data-island="web" style="--i:0">
+                            <span class="ig-done-star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z"/></svg></span>
+                            <img src="images/ui/island-web.webp" alt="" width="640" height="501" decoding="async">
+                            <span class="ig-label"><strong data-ig="n_web"></strong><small data-ig="t_web"></small></span>
+                        </button>
+                        <button type="button" class="ig-island" data-island="math" style="--i:1">
+                            <span class="ig-done-star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z"/></svg></span>
+                            <img src="images/ui/island-math.webp" alt="" width="640" height="478" decoding="async">
+                            <span class="ig-label"><strong data-ig="n_math"></strong><small data-ig="t_math"></small></span>
+                        </button>
+                        <button type="button" class="ig-island" data-island="english" style="--i:2">
+                            <span class="ig-done-star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.4l-5.9 3.3 1.3-6.6L2.5 9.5l6.6-.8z"/></svg></span>
+                            <img src="images/ui/island-english.webp" alt="" width="640" height="546" decoding="async">
+                            <span class="ig-label"><strong data-ig="n_english"></strong><small data-ig="t_english"></small></span>
+                        </button>
+                        </div>
+                    </div>
+                    <div id="island-play" class="ig-play" hidden></div>
+                    <div id="ig-studio" class="ig-studio" hidden>
+                        <div class="ig-bar ig-studio-bar"><button type="button" class="ig-back" data-sact="back" data-ig="back"></button><span class="ig-name" data-ig="n_web"></span><div class="practice-top-switch-bar">
+                        <div class="practice-switch-tabs">
+                            <button type="button" class="practice-tab-btn active" id="tab-game-teens" onclick="setPracticeGame('teens')">
+                                <span class="tab-dot dot-rbx"></span>
+                                <span data-i18n="tab_game_teens">Веб-студия</span>
+                            </button>
+                            <button type="button" class="practice-tab-btn" id="tab-game-kids" onclick="setPracticeGame('kids')">
+                                <span class="tab-dot dot-mc"></span>
+                                <span data-i18n="tab_game_kids">Лабиринт Scratch</span>
+                            </button>
+                        </div>
+                    </div><button type="button" class="ig-done-btn" data-sact="done" data-ig="studio_done"></button></div>
+                        <div class="ig-ask" id="ig-ask" aria-live="polite"><span class="ig-ask-tag" data-ig="ask_tag"></span><span class="ig-ask-text" id="ig-ask-text"></span></div>
+
+
+                    <!-- GAME 1: KIDS LAB (SCRATCH & BLOCKLY ALGORITHM QUEST WITH VIBRANT ARTWORK) -->
+                    <div id="practice-kids-block" class="hidden">
+                        <!-- Widescreen Visual Quest Banner with Generative Hero Artwork -->
+                        <div class="kids-quest-hero-banner">
+                            <div class="quest-banner-media">
+                                <img src="./images/kids_coding_quest.webp" alt="Scratch & Blockly Quest" class="quest-hero-img" loading="lazy" decoding="async" width="180" height="90">
+                                <div class="quest-media-overlay">
+                                    <span class="quest-tag-pill">SCRATCH & BLOCKLY</span>
+                                </div>
+                            </div>
+                            <div class="quest-banner-info">
+                                <div class="quest-level-row">
+                                    <div class="quest-level-pills">
+                                        <button type="button" class="quest-lvl-btn active" id="btn-lvl-1" onclick="setAlgoLevel(1)" data-i18n="lvl_1_btn">1. Первый шаг</button>
+                                        <button type="button" class="quest-lvl-btn" id="btn-lvl-2" onclick="setAlgoLevel(2)" data-i18n="lvl_2_btn">2. Цикл REPEAT</button>
+                                        <button type="button" class="quest-lvl-btn" id="btn-lvl-3" onclick="setAlgoLevel(3)" data-i18n="lvl_3_btn">3. Мега-Квест</button>
+                                    </div>
+                                    <details class="mentor-solution"><summary data-i18n="mentor_solution">Для ментора</summary><button type="button" class="skip-btn" onclick="autoSolveAlgoAndNext()" data-i18n="btn_auto">Авто-решение</button></details>
+                                </div>
+                                <h2 class="quest-title" id="algo-mission-title" data-i18n="s4_kids_title">Запрограммируй путь к Алмазному Порталу</h2>
+                            </div>
+                        </div>
+                        <p id="algo-mission-desc" class="maze-mission-desc">Собери цепочку блоков движения и приведи Стива к Алмазному Порталу!</p>
+                        <div class="maze-coin-progress"><img decoding="async" loading="lazy" src="images/coin_gold.webp" alt="" width="18" height="18"><span data-i18n="maze_coins">Собрано монет:</span> <b id="algo-coin-counter">0 / 1</b></div>
+
+                        <div class="maze-rules"><span><img decoding="async" loading="lazy" src="images/kids_creeper_guard.webp" alt="" width="22" height="22"><span data-i18n="maze_rule_creeper">Касание Крипера возвращает на старт. Обойди или перепрыгни его.</span></span><span><span class="maze-lava-mark">LAVA</span><span data-i18n="maze_rule_lava">Лаву перепрыгивай, стены обходи.</span></span><span><img decoding="async" loading="lazy" src="images/kids_diamond_portal.webp" alt="" width="22" height="22"><span data-i18n="maze_rule_portal">Портал открывает следующий уровень.</span></span></div>
+
+                        <div class="algo-interactive-zone">
+                            <!-- Playable Bright Minecraft Game Grid with Large Visuals -->
+                            <div class="algo-board-wrapper">
+                                <div class="algo-grid-board" id="algo-board"></div>
+                            </div>
+
+                            <!-- Scratch & Blockly Style Coding Toolbox -->
+                            <div class="algo-controls-col">
+                                <!-- Section 1: Motion Blocks -->
+                                <div class="blockly-section-row">
+                                    <span class="blockly-group-label" data-i18n="blockly_motion_label">Блоки движения:</span>
+                                    <div class="blockly-blocks-grid motion-grid">
+                                        <button type="button" class="blockly-cmd-btn block-btn-up" onclick="addAlgoCmd('UP')" title="Движение вверх">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                                            <span data-i18n="cmd_up_short">UP</span>
+                                        </button>
+                                        <button type="button" class="blockly-cmd-btn block-btn-down" onclick="addAlgoCmd('DOWN')" title="Движение вниз">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                                            <span data-i18n="cmd_down_short">DOWN</span>
+                                        </button>
+                                        <button type="button" class="blockly-cmd-btn block-btn-left" onclick="addAlgoCmd('LEFT')" title="Движение влево">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                                            <span data-i18n="cmd_left_short">LEFT</span>
+                                        </button>
+                                        <button type="button" class="blockly-cmd-btn block-btn-right" onclick="addAlgoCmd('RIGHT')" title="Движение вправо">
+                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                            <span data-i18n="cmd_right_short">RIGHT</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Control & Loops (Scratch Style) -->
+                                <div class="blockly-section-row">
+                                    <span class="blockly-group-label" data-i18n="blockly_loops_label">Циклы и трюки (Scratch):</span>
+                                    <div class="blockly-blocks-grid control-grid">
+                                        <button type="button" class="blockly-cmd-btn block-btn-loop" id="btn-loop-2x" onclick="toggleLoopModifier(2)" title="Повторить 2 раза">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                                            <b class="mz-x">×2</b><span data-i18n="cmd_repeat_2x">REPEAT 2x</span>
+                                        </button>
+                                        <button type="button" class="blockly-cmd-btn block-btn-loop" id="btn-loop-3x" onclick="toggleLoopModifier(3)" title="Повторить 3 раза">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                                            <b class="mz-x">×3</b><span data-i18n="cmd_repeat_3x">REPEAT 3x</span>
+                                        </button>
+                                        <button type="button" class="blockly-cmd-btn block-btn-jump" id="btn-jump-cmd" onclick="toggleJumpModifier()" title="Прыжок через клетку">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                            <span data-i18n="cmd_jump">JUMP</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Visual Blockly Code Stack -->
+                                <div class="algo-queue-box">
+                                    <div class="queue-header-mini">
+                                        <span data-i18n="code_stack_title">Программа Стива (Scratch Stack):</span>
+                                        <span class="step-count-pill" id="algo-step-count">0 / 8</span>
+                                    </div>
+                                    <div class="queue-list" id="algo-commands-list">
+                                        <span class="queue-empty" data-i18n="cmd_empty">Выбирай блоки команд выше...</span>
+                                    </div>
+                                </div>
+
+                                <!-- Action Buttons -->
+                                <div class="algo-action-btns">
+                                    <button type="button" class="btn-clean" onclick="clearAlgo()" data-i18n="btn_clear">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                                        <span data-i18n="btn_clear_text">Сбросить</span>
+                                    </button>
+                                    <button type="button" class="primary-big-btn pulse-glow" onclick="runAlgoCode()">
+                                        <span data-i18n="btn_run_code">Запуск программы</span>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                    </button>
+                                </div>
+
+                                <div class="algo-feedback-text" id="algo-status-msg"></div>
+                            </div>
+                        </div>
+
+                        <div class="mz-ach" id="mz-ach" aria-label="achievements">
+                            <img class="mz-ach-star" src="images/maze/star.svg" alt="" width="40" height="40">
+                            <div class="mz-ach-mid"><div class="mz-ach-top"><span data-ig="ach"></span><b id="mz-ach-count">0 / 3</b></div><div class="mz-ach-bar"><i id="mz-ach-fill"></i></div></div>
+                            <div class="mz-ach-chests"><img src="images/maze/lock.svg" alt="" width="52" height="46"><img src="images/maze/lock.svg" alt="" width="52" height="46"><img src="images/maze/lock.svg" alt="" width="52" height="46"></div>
+                        </div>
+                    </div>
+
+                    <!-- GAME 2: TEENS STUDIO (HTML + CSS + JS - 100% BRIGHT, 100% PHOTOS, ZERO EMOJIS) -->
+                    <div id="practice-teens-block">
+                        <div class="step-header-row teens-header-row">
+                            <div>
+                                <span class="step-badge purple" data-i18n="s4_teens_badge">ПРАКТИКА • ВЕБ-СТУДИЯ</span>
+                                <h2 class="step-title" data-i18n="s4_teens_title">Собери и оживи портал Roblox & Minecraft!</h2>
+                            </div>
+                            <div class="layer-switcher-pills">
+                                <button type="button" class="layer-pill-btn" id="pill-mode-html" onclick="setWebLayerMode('html')">
+                                    <span class="layer-dot dot-html"></span>
+                                    <span data-i18n="layer_tab_1">1. Скелет HTML</span>
+                                </button>
+                                <button type="button" class="layer-pill-btn" id="pill-mode-css" onclick="setWebLayerMode('css')">
+                                    <span class="layer-dot dot-css"></span>
+                                    <span data-i18n="layer_tab_2">2. Одежда CSS</span>
+                                </button>
+                                <button type="button" class="layer-pill-btn" id="pill-mode-js" onclick="setWebLayerMode('js')">
+                                    <span class="layer-dot dot-js"></span>
+                                    <span data-i18n="layer_tab_3">3. Мозг JS</span>
+                                </button>
+                                <button type="button" class="layer-pill-btn active" id="pill-mode-all" onclick="setWebLayerMode('all')">
+                                    <span class="layer-dot dot-all"></span>
+                                    <span data-i18n="layer_tab_all">Все 3 слоя вместе</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Web Studio Split Layout -->
+                        <div class="teens-studio-container">
+                            <!-- Left Column: Bright Light Code Lab -->
+                            <div class="teens-code-lab">
+                                <div class="code-panel-header">
+                                    <div class="code-dots-group">
+                                        <span class="code-dot dot-red"></span>
+                                        <span class="code-dot dot-yellow"></span>
+                                        <span class="code-dot dot-green"></span>
+                                    </div>
+                                    <div class="code-tabs-nav">
+                                        <span class="code-pill-tab html-tab active">index.html</span>
+                                        <span class="code-pill-tab css-tab active">style.css</span>
+                                        <span class="code-pill-tab js-tab active">script.js</span>
+                                    </div>
+                                </div>
+
+                                <div class="code-editor-body">
+                                    <!-- LAYER 1: HTML Card -->
+                                    <div class="layer-editor-card card-html" id="layer-card-html">
+                                        <div class="layer-card-head">
+                                            <span class="layer-step-badge badge-orange">HTML</span>
+                                            <span class="layer-card-title" data-i18n="sec_html_title">Слой 1: Фундамент и скелет (HTML)</span>
+                                        </div>
+                                        <div class="layer-card-tip" data-i18n="sec_html_tip">Тег &lt;h1&gt; — это главная вывеска на здании портала!</div>
+                                        
+                                        <div class="code-line-wrap">
+                                            <div class="code-row"><span class="c-tag">&lt;h1</span> <span class="c-attr">class</span>=<span class="c-str">"portal-title"</span><span class="c-tag">&gt;</span></div>
+                                            <div class="code-slot-box">
+                                                <input type="text" id="custom-team-input" class="code-input-slot" value="ЧЕМПИОНАТ ROBLOX & MINECRAFT 2026" placeholder="Введи название турнира..." maxlength="100" oninput="updateLiveWebPreview()" onmouseenter="highlightLiveBlock('elem-banner', true)" onmouseleave="highlightLiveBlock('elem-banner', false)">
+                                            </div>
+                                            <div class="code-row"><span class="c-tag">&lt;/h1&gt;</span></div>
+                                        </div>
+
+                                        <div class="quick-chips-row">
+                                            <span class="quick-chip-lbl" data-i18n="code_quick_pick">Выбрать:</span>
+                                            <button type="button" class="quick-chip-btn" onclick="setQuickTeam('ROBLOX CHAMPIONS 2026')">Roblox</button>
+                                            <button type="button" class="quick-chip-btn" onclick="setQuickTeam('MINECRAFT ARENA HEROES')">Minecraft</button>
+                                            <button type="button" class="quick-chip-btn" onclick="setQuickTeam('КИБЕР БИТВА ГОДА')">Кибер Битва</button>
+                                            <button type="button" class="quick-chip-btn" onclick="setQuickTeam('ENDER DRAGON CLAN')">Ender Clan</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="web-extra-editor">
+                                        <div class="code-row"><span class="c-tag">&lt;p&gt;</span></div>
+                                        <label class="web-editor-label" for="custom-subtitle-input" data-i18n="web_slogan">Слоган сайта — напиши свой</label>
+                                        <input id="custom-subtitle-input" class="code-input-slot" maxlength="100" value="Твоя команда. Твои правила. Твой мир." oninput="updateLiveWebPreview()">
+                                        <div class="code-row"><span class="c-tag">&lt;/p&gt;</span></div>
+                                        <div class="web-ideas"><span data-i18n="web_ideas">Идеи для твоего сайта:</span><button type="button" onclick="applyWebIdea('space')" data-i18n="idea_space">Космоклуб</button><button type="button" onclick="applyWebIdea('robot')" data-i18n="idea_robot">Лига роботов</button><button type="button" onclick="applyWebIdea('tournament')" data-i18n="idea_tournament">Турнир</button></div>
+                                    </div>
+
+                                    <!-- LAYER 2: CSS Card -->
+                                    <div class="layer-editor-card card-css" id="layer-card-css">
+                                        <div class="layer-card-head">
+                                            <span class="layer-step-badge badge-cyan">CSS</span>
+                                            <span class="layer-card-title" data-i18n="sec_css_title">Слой 2: Одежда, стиль и неон (CSS)</span>
+                                        </div>
+                                        <div class="layer-card-tip" data-i18n="sec_css_tip">CSS превращает серый текст в неоновый геймерский портал!</div>
+
+                                        <div class="code-line-wrap">
+                                            <div class="code-row"><span class="c-sel">.portal-btn</span> <span class="c-brace">{</span></div>
+                                            <div class="code-row indent"><span class="c-prop">background</span>: <span id="code-btn-hex-disp" class="c-hex-badge">#00E5FF</span>;</div>
+                                            <div class="code-row indent"><span class="c-prop">box-shadow</span>: <span class="c-val">0 8px 24px #0003</span>;</div>
+                                            <div class="code-row"><span class="c-brace">}</span></div>
+                                        </div>
+
+                                        <div class="style-palette-row">
+                                            <button type="button" class="code-color-chip active" data-theme="cyan" onclick="setWebCodeTheme('cyan', '#00E5FF')">
+                                                <span class="chip-dot-color" style="background:#00E5FF;"></span>
+                                                <span data-i18n="color_cyan">Циан</span>
+                                            </button>
+                                            <button type="button" class="code-color-chip" data-theme="green" onclick="setWebCodeTheme('green', '#10B981')">
+                                                <span class="chip-dot-color" style="background:#10B981;"></span>
+                                                <span data-i18n="color_green">Изумруд</span>
+                                            </button>
+                                            <button type="button" class="code-color-chip" data-theme="orange" onclick="setWebCodeTheme('orange', '#FF6B00')">
+                                                <span class="chip-dot-color" style="background:#FF6B00;"></span>
+                                                <span data-i18n="color_orange">Огонь</span>
+                                            </button>
+                                            <button type="button" class="code-color-chip" data-theme="purple" onclick="setWebCodeTheme('purple', '#A855F7')">
+                                                <span class="chip-dot-color" style="background:#A855F7;"></span>
+                                                <span data-i18n="color_purple">Пурпур</span>
+                                            </button>
+                                            <button type="button" class="code-color-chip" data-theme="gold" onclick="setWebCodeTheme('gold', '#FBBF24')">
+                                                <span class="chip-dot-color" style="background:#FBBF24;"></span>
+                                                <span data-i18n="color_gold">Золото</span>
+                                            </button>
+                                        </div>
+
+                                        <div class="code-slot-box" style="margin-top: 6px;">
+                                            <span class="c-tag" style="font-size:0.75rem;">&lt;button&gt;</span>
+                                            <input type="text" id="custom-btn-input" class="code-input-slot" value="Запустить турнир и салют!" placeholder="Текст на кнопке..." maxlength="100" oninput="updateLiveWebPreview()" onmouseenter="highlightLiveBlock('elem-btn', true)" onmouseleave="highlightLiveBlock('elem-btn', false)">
+                                            <span class="c-tag" style="font-size:0.75rem;">&lt;/button&gt;</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="web-extra-editor web-radius-editor"><label for="web-radius-input">border-radius: <output id="web-radius-value">12px</output>;</label><input id="web-radius-input" type="range" min="0" max="28" value="12" step="2" oninput="updateWebDesign()"><small data-i18n="web_radius_tip">Меняй форму всех карточек и кнопок</small></div>
+
+                                    <!-- LAYER 3: JavaScript Card -->
+                                    <div class="layer-editor-card card-js" id="layer-card-js">
+                                        <div class="layer-card-head">
+                                            <span class="layer-step-badge badge-purple">JS</span>
+                                            <span class="layer-card-title" data-i18n="sec_js_title">Слой 3: Мозг и оживление (JavaScript)</span>
+                                        </div>
+                                        <div class="layer-card-tip" data-i18n="sec_js_tip">JavaScript слушает клик игрока, запускает звук и праздничный салют!</div>
+
+                                        <div class="code-line-wrap">
+                                            <div class="code-row"><span class="c-js-obj">btn</span>.<span class="c-js-event">onclick</span> = <span class="c-js-kw">function</span>() {</div>
+                                            <div class="code-row indent"><span class="c-js-fn">launchVictorySalute</span>();</div>
+                                            <div class="code-row indent"><span class="c-js-fn">levelUpHeroes</span>(<span class="c-val">+<input id="web-level-step" type="number" min="1" max="5" value="1" aria-label="Level increment"></span>);</div>
+                                            <div class="code-row"><span class="c-brace">};</span></div>
+                                        </div>
+
+                                        <button type="button" class="btn-fire-salute-trigger" onclick="triggerTicketClick()">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                            <span data-i18n="btn_test_js">Запустить салют победы через JS!</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Live Browser Simulator -->
+                            <div class="web-live-browser">
+                                <div class="browser-top">
+                                    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+                                    <span class="browser-url">https://championship.junior-it.uz</span>
+                                    <span class="browser-mode-indicator" id="browser-mode-tag" data-i18n="browser_mode_all">Режим: 100% Живой сайт (HTML + CSS + JS)</span>
+                                </div>
+
+                                <div class="browser-content-area theme-cyan mode-all" id="web-sim-body">
+                                    <!-- Educational Mode Banner (Active when toggling layers) -->
+                                    <div class="browser-layer-notice" id="browser-layer-notice" style="display: none;">
+                                        <span id="browser-layer-notice-text">Слой 1: Только скелет HTML</span>
+                                    </div>
+
+                                    <!-- Top Navigation -->
+                                    <div class="site-block site-navbar" id="elem-header">
+                                        <span id="live-team-name-badge">ROBLOX & MINECRAFT HEROES</span>
+                                        <div class="site-nav-links" data-i18n="live_nav_links">Главная • Герои • Крафт</div>
+                                    </div>
+
+                                    <!-- Widescreen 3D Arena Banner -->
+                                    <div class="site-block arena-banner-block" id="elem-banner">
+                                        <div class="arena-banner-frame">
+                                            <img decoding="async" src="images/teens_cyber_arena.webp" class="arena-banner-photo" alt="Championship Arena" loading="lazy" width="600" height="240">
+                                            <div class="arena-banner-overlay">
+                                                <h1 class="banner-title-text" id="live-banner-text" data-i18n="live_banner_text">ЧЕМПИОНАТ ROBLOX & MINECRAFT 2026</h1>
+                                                <p id="live-subtitle" class="live-subtitle">Твоя команда. Твои правила. Твой мир.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Big Interactive Action Button -->
+                                    <div class="site-block" id="elem-btn" style="text-align: center;">
+                                        <button type="button" class="site-ticket-action-btn pulse-interactive" id="live-main-action-btn" onclick="triggerTicketClick()">
+                                            <span data-i18n="live_ticket_btn" id="live-ticket-btn-text">Запустить турнир и салют!</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- In-Browser Victory Celebration Banner -->
+                                    <div class="live-browser-celebration-card" id="live-victory-card" style="display: none;">
+                                        <div class="celebration-title" data-i18n="live_victory_title">Ура! Твой сайт ожил!</div>
+                                        <div class="celebration-desc" data-i18n="live_victory_desc">Ты применил HTML (скелет), CSS (одежду) и JavaScript (мозг со взрывом салюта)!</div>
+                                        <button type="button" class="celebration-replay-btn" onclick="triggerTicketClick()">
+                                            <span>Запустить салют ещё раз!</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- 3D Heroes Roster -->
+                                    <div class="site-block" id="elem-team">
+                                        <div class="pixel-heroes-grid">
+                                            <!-- Hero 1: Steve -->
+                                            <div class="pixel-hero-card hero-minecraft active" id="hero-card-1" onclick="selectPixelHero(1)">
+                                                <div class="hero-selected-tag" id="hero-tag-1"><span data-i18n="hero_active_tag">Выбран</span></div>
+                                                <div class="hero-top-row">
+                                                    <span class="hero-badge badge-mc">MINECRAFT</span>
+                                                    <span class="hero-lvl-badge" id="hero-lvl-1">LVL 12</span>
+                                                </div>
+                                                <div class="hero-avatar-box">
+                                                    <img src="images/hero_steve.webp" class="hero-avatar-img" alt="Steve" loading="lazy" decoding="async" width="120" height="120">
+                                                </div>
+                                                <div class="hero-info-col">
+                                                    <div class="hero-name" data-i18n="hero_steve_name">Стив Шахтёр</div>
+                                                    <div class="hero-role" data-i18n="hero_steve_role">Алмазный крафт</div>
+                                                </div>
+                                                <div class="hero-xp-section">
+                                                    <div class="hero-xp-bar">
+                                                        <div class="hero-xp-fill" id="hero-xp-1" style="width: 75%;"></div>
+                                                    </div>
+                                                    <div class="hero-xp-stats">
+                                                        <span id="hero-xp-text-1">75/100 XP</span>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="hero-lvlup-btn" onclick="lvlUpHero(event, 1)">
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                                    <span data-i18n="hero_lvlup">+1 LVL</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Hero 2: Robloxian -->
+                                            <div class="pixel-hero-card hero-roblox" id="hero-card-2" onclick="selectPixelHero(2)">
+                                                <div class="hero-selected-tag" id="hero-tag-2" style="display: none;"><span data-i18n="hero_active_tag">Выбран</span></div>
+                                                <div class="hero-top-row">
+                                                    <span class="hero-badge badge-rbx">ROBLOX</span>
+                                                    <span class="hero-lvl-badge" id="hero-lvl-2">LVL 15</span>
+                                                </div>
+                                                <div class="hero-avatar-box">
+                                                    <img src="images/hero_roblox.webp" class="hero-avatar-img" alt="Robloxian" loading="lazy" decoding="async" width="120" height="120">
+                                                </div>
+                                                <div class="hero-info-col">
+                                                    <div class="hero-name" data-i18n="hero_roblox_name">Роблоксиан Про</div>
+                                                    <div class="hero-role" data-i18n="hero_roblox_role">Паркур Мастер</div>
+                                                </div>
+                                                <div class="hero-xp-section">
+                                                    <div class="hero-xp-bar">
+                                                        <div class="hero-xp-fill" id="hero-xp-2" style="width: 85%;"></div>
+                                                    </div>
+                                                    <div class="hero-xp-stats">
+                                                        <span id="hero-xp-text-2">85/100 XP</span>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="hero-lvlup-btn" onclick="lvlUpHero(event, 2)">
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                                    <span data-i18n="hero_lvlup">+1 LVL</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Hero 3: Ender Master -->
+                                            <div class="pixel-hero-card hero-ender" id="hero-card-3" onclick="selectPixelHero(3)">
+                                                <div class="hero-selected-tag" id="hero-tag-3" style="display: none;"><span data-i18n="hero_active_tag">Выбран</span></div>
+                                                <div class="hero-top-row">
+                                                    <span class="hero-badge badge-boss">BOSS</span>
+                                                    <span class="hero-lvl-badge" id="hero-lvl-3">LVL 20</span>
+                                                </div>
+                                                <div class="hero-avatar-box">
+                                                    <img src="images/hero_ender.webp" class="hero-avatar-img" alt="Ender Master" loading="lazy" decoding="async" width="120" height="120">
+                                                </div>
+                                                <div class="hero-info-col">
+                                                    <div class="hero-name" data-i18n="hero_ender_name">Эндер Мастер</div>
+                                                    <div class="hero-role" data-i18n="hero_ender_role">Телепортация</div>
+                                                </div>
+                                                <div class="hero-xp-section">
+                                                    <div class="hero-xp-bar">
+                                                        <div class="hero-xp-fill" id="hero-xp-3" style="width: 90%;"></div>
+                                                    </div>
+                                                    <div class="hero-xp-stats">
+                                                        <span id="hero-xp-text-3">90/100 XP</span>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="hero-lvlup-btn" onclick="lvlUpHero(event, 3)">
+                                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                                    <span data-i18n="hero_lvlup">+1 LVL</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="legacy-practice" hidden aria-hidden="true">
+
+                    <section id="practice-math-block">
+                        <h2 class="step-title" data-i18n="math_practice_title">Математика: попробуй свои силы</h2>
+                        <p class="step-desc" data-i18n="math_practice_desc">Три примера задач. Рассуждай, проверяй ответы и пользуйся подсказками — спешить не нужно.</p>
+                        <div class="math-practice-layout">
+                            <div id="practice-math-task" class="math-practice-card"></div>
+                            <aside class="math-english-card">
+                                <h3 data-i18n="math_english_title">Теперь — английский</h3>
+                                <p data-i18n="math_english_desc">Открой карточки, переворачивай их и попробуй короткие диалоги вместе с ментором.</p>
+                                <button type="button" class="btn-secondary" onclick="openEnglishModal()" data-i18n="math_english_open">Открыть английский →</button>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section id="practice-english-block">
+                        <h2 class="step-title" data-i18n="english_practice_title">Английский: попробуй свои силы</h2>
+                        <p class="step-desc" data-i18n="english_practice_desc">Выбери мир, открой его и попробуй: карточки, диалог или суперсилы английского.</p>
+                        <div class="english-practice-grid">
+                            <button type="button" class="game-3d-card english-practice-card" onclick="openEnglishModal(); switchEnglishTab(0)">
+                                <b data-i18n="en_tab_1">1. Gaming • Карточки</b>
+                                <small data-i18n="en_t1_hint">Учимся без скучных правил: запоминаем через визуальные карточки и квизы</small>
+                            </button>
+                            <button type="button" class="game-3d-card english-practice-card" onclick="openEnglishModal(); switchEnglishTab(1)">
+                                <b data-i18n="en_tab_2">2. Coding • Диалоги</b>
+                                <small data-i18n="en_t2_hint">Говорим с первого занятия: обсуждаем любимые игры, YouTube-ролики и IT-проекты</small>
+                            </button>
+                            <button type="button" class="game-3d-card english-practice-card" onclick="openEnglishModal(); switchEnglishTab(2)">
+                                <b data-i18n="en_tab_3">3. Global • Суперсилы</b>
+                                <small data-i18n="en_vision_subtitle">Включи рубильник и посмотри, как английский открывает всю планету</small>
+                            </button>
+                        </div>
+                    </section>
+
+
+                
+                    </div>
+                </div>
+
+                <div class="slide-footer-row">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(4)" data-i18n="btn_back">← Назад</button>
+                    <div class="slide-footer-actions-group">
+                        <span class="ig-next-hint" id="ig-next-hint" data-ig="next_hint"></span>
+                        <button type="button" class="primary-big-btn" id="ig-next" onclick="goToSlide(7)" disabled>
+                            <span data-i18n="s4_btn_next">К финалу →</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+
+            <!-- ==============================================================
+                 STEP 5: COURSE PROGRAM (content of the Junior Dasturlash deck and the Matematika 1–11 brief)
+                 Rendered by course-program.js for the program chosen on step 0.
+                 ============================================================== -->
+            <article class="slide-card" id="slide-6">
+                <div class="slide-main-col">
+                    <div class="step-header-row">
+                        <div>
+                            <span class="step-badge purple" data-i18n="cp_badge">ПРОГРАММА КУРСА</span>
+                            <h2 class="step-title" id="cp-title">Программа курса</h2>
+                            <p class="step-desc" id="cp-desc"></p>
+                        </div>
+                        <button type="button" class="skip-btn" onclick="goToSlide(7)" data-i18n="btn_skip">Пропустить</button>
+                    </div>
+                    <section id="course-program" class="course-program" aria-label="Программа курса"></section>
+                </div>
+
+                <div class="slide-footer-row">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(5)" data-i18n="btn_back">← Назад</button>
+                    <button type="button" class="primary-big-btn" onclick="goToSlide(7)">
+                        <span id="cp-next-label">К финалу</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </article>
+
+
+            <!-- ==============================================================
+                 STEP 6: FINAL — DREAM FUTURE & TRANSFORMATION (TWO PATHS)
+                 100% BRIGHT PALETTE, PURE VISUAL SHOWCASE, TWO PATHS CONTRAST
+                 ============================================================== -->
+            <article class="slide-card" id="slide-7">
+                <div class="slide-main-col">
+                    <div class="final-future-container">
+                        <!-- Top Header Row with Title, Subtitle & CoinShop Store Button -->
+                        <div class="final-future-header">
+                            <div class="final-future-title-group">
+                                <span class="step-badge gold" data-i18n="s5_badge">ФИНАЛ • ТВОЙ ВЫБОР</span>
+                                <h2 class="step-title" data-i18n="s6_title">ОДИН ГОД. ДВА РЕЗУЛЬТАТА.</h2>
+                                <div class="final-future-sub-row">
+                                    <span class="step-subtitle-note" data-i18n="s6_subtitle">Кем ты станешь через год?</span>
+                                    <span class="step-subtitle-sep">•</span>
+                                    <span class="step-supporting-note" data-i18n="s6_supporting_text">Потребителем технологий или их создателем?</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Visual Contrast Stage: 2 Grand Cinematic Scenes + Center Crossroads -->
+                        <div class="cinematic-future-stage">
+                            <!-- Left: The Passive Consumer World (Night, Screen Consumption) -->
+                            <div class="cinematic-scene-portal scene-passive" onclick="selectFuturePath('passive')" tabindex="0" role="button" aria-label="Сценарий Потреблять">
+                                <div class="scene-image-container">
+                                    <img decoding="async" src="./images/scene_passive_consumer.webp" alt="Подросток в тёмной комнате в плену бесконечной ленты видео" class="cinematic-scene-img" loading="lazy" width="1376" height="768">
+                                    <div class="scene-vignette dark-vignette"></div>
+                                </div>
+                                <div class="scene-badge-header">
+                                    <span class="scene-status-badge passive-badge" data-i18n="path_passive_title">ПОТРЕБЛЯТЬ</span>
+                                    <span class="scene-status-hint passive-hint" data-i18n="path_passive_hint">Технологии управляют твоим вниманием</span>
+                                </div>
+
+                                <!-- Symmetrical Bottom Dock Panel: 4-Step Behavioral Sequence -->
+                                <div class="scene-dock-panel passive-dock">
+                                    <div class="sequence-track passive-sequence">
+                                        <span class="sequence-step">
+                                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                            <span data-i18n="passive_step_1">Смотреть</span>
+                                        </span>
+                                        <span class="sequence-sep">›</span>
+                                        <span class="sequence-step">
+                                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="6" width="20" height="12" rx="3"></rect><path d="M6 12h4m-2-2v4"></path></svg>
+                                            <span data-i18n="passive_step_2">Играть</span>
+                                        </span>
+                                        <span class="sequence-sep">›</span>
+                                        <span class="sequence-step">
+                                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                                            <span data-i18n="passive_step_3">Листать</span>
+                                        </span>
+                                        <span class="sequence-sep">›</span>
+                                        <span class="sequence-step">
+                                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                            <span data-i18n="passive_step_4">Пользоваться готовым</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Center: Interactive Crossroads Axis & Story Bridge -->
+                            <div class="cinematic-crossroads-axis">
+                                <div class="crossroads-beam-line"></div>
+                                <div class="crossroads-bridge-arm arm-left"></div>
+                                <div class="crossroads-story-bridge">
+                                    <button type="button" class="bridge-wing wing-left" onclick="selectFuturePath('passive')">
+                                        <span class="wing-arrow">←</span>
+                                        <span class="wing-text" data-i18n="bridge_consume">ПОТРЕБЛЯТЬ</span>
+                                    </button>
+                                    <div class="bridge-center-node">
+                                        <span class="node-pulse-ring"></span>
+                                        <span class="node-title" data-i18n="bridge_choice">ТВОЙ ВЫБОР</span>
+                                    </div>
+                                    <button type="button" class="bridge-wing wing-right active" onclick="selectFuturePath('creator')">
+                                        <span class="wing-text" data-i18n="bridge_create">СОЗДАВАТЬ</span>
+                                        <span class="wing-arrow">→</span>
+                                    </button>
+                                </div>
+                                <div class="crossroads-bridge-arm arm-right"></div>
+                            </div>
+
+                            <!-- Right: The Active Creator World (Visual Hero 65-70% + Results Dock 30-35% Below) -->
+                            <div class="cinematic-scene-portal scene-creator choice-active" onclick="selectFuturePath('creator')" tabindex="0" role="button" aria-label="Сценарий Создавать">
+                                <!-- Top Visual Stage: 65-70% of Card Height (Child, Laptop, 3D Game & AI Screens Open & Visible) -->
+                                <div class="creator-visual-stage">
+                                    <div class="scene-image-container">
+                                        <img decoding="async" src="./images/scene_active_creator.webp" alt="Подросток создаёт свой цифровой мир: 3D игры, сайты, AI и проекты" class="cinematic-scene-img" loading="lazy" width="1376" height="768">
+                                        <div class="scene-vignette creator-visual-vignette"></div>
+                                    </div>
+                                    <div class="scene-badge-header compact-badge-header">
+                                        <span class="scene-status-badge creator-badge" data-i18n="path_creator_title">СОЗДАВАТЬ</span>
+                                        <span class="scene-status-hint creator-hint" data-i18n="path_creator_hint">Технологии становятся твоим инструментом</span>
+                                    </div>
+
+                                    <!-- Single Compact Workflow Bar at the bottom of the visual stage -->
+                                    <div class="creator-visual-workflow" aria-label="Процесс создания">
+                                        <div class="workflow-step">
+                                            <svg class="workflow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                            <span data-i18n="creator_step_1">Придумывать</span>
+                                        </div>
+                                        <span class="workflow-arrow" aria-hidden="true">→</span>
+                                        <div class="workflow-step">
+                                            <svg class="workflow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                            <span data-i18n="creator_step_2">Создавать</span>
+                                        </div>
+                                        <span class="workflow-arrow" aria-hidden="true">→</span>
+                                        <div class="workflow-step">
+                                            <svg class="workflow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                                            <span data-i18n="creator_step_3">Запускать</span>
+                                        </div>
+                                        <span class="workflow-arrow" aria-hidden="true">→</span>
+                                        <div class="workflow-step step-result">
+                                            <svg class="workflow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                            <span data-i18n="creator_step_4">Результат</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bottom Results & Trust Dock (30-35% of Card Height, Below the Image) -->
+                                <div class="creator-results-dock">
+                                    <!-- Projects strip -->
+                                    <div class="creator-projects-section">
+                                        <div class="projects-micro-heading" data-i18n="s6_can_create_title">ЧТО РЕБЁНОК СМОЖЕТ СОЗДАТЬ</div>
+                                        <div class="creator-projects-row">
+                                            <div class="project-pill-item">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                                <span data-i18n="step_site">Сайт</span>
+                                            </div>
+                                            <div class="project-pill-item">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="6" width="20" height="12" rx="3"></rect><path d="M6 12h4m-2-2v4m10-2h.01m-3 0h.01"></path></svg>
+                                                <span data-i18n="step_game">3D-игра</span>
+                                            </div>
+                                            <div class="project-pill-item">
+                                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                                                <span data-i18n="step_ai">AI-проект</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Action Row (Sales CTA + Discreet IT Park Trust Note) -->
+                        <div class="final-cta-bar">
+                            <button type="button" class="primary-big-btn cta-sales-btn pulse-glow" onclick="teleportToLMS()">
+                                <span data-i18n="btn_start_journey">Я ВЫБИРАЮ СОЗДАВАТЬ →</span>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                            <div class="cta-sub-note-text" data-i18n="cta_sub_note">Начать обучение в Junior IT</div>
+                            <div class="final-trust-seals" data-i18n="itpark_secondary_note">
+                                Условия обучения и документы уточни у ментора
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-footer-row">
+                    <button type="button" class="btn-secondary" onclick="goToSlide(5)" data-i18n="btn_back">← Назад</button>
+                    <div></div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- ======================================================================
+         JUNIOR KURS COSMIC MISSION MODAL (ZERO-SCROLL COMPACT 3D SPLIT LAYOUT)
+         ====================================================================== -->
+    <div class="galaxy-modal-overlay" id="junior-course-modal" onclick="closeJuniorCourseMap(event)" role="dialog" aria-modal="true" aria-labelledby="galaxy-main-title">
+        <div class="galaxy-modal-window compact-layout" onclick="event.stopPropagation()">
+            
+            <!-- Close Button (Top Right) -->
+            <button type="button" class="galaxy-close-btn" onclick="closeJuniorCourseMap()" title="Закрыть (Esc)" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <!-- LEFT COLUMN: Spacious Cosmic Solar System with Centered Sun & 4 Planets -->
+            <div class="solar-cosmos-col" id="solar-cosmos-stage">
+                
+                <!-- Rich Deep Space Stars, Sparkles & Nebulae -->
+                <div class="solar-deep-space">
+                    <div class="stars-cluster stars-1"></div>
+                    <div class="stars-cluster stars-2"></div>
+                    <div class="stars-cluster stars-3"></div>
+                    <div class="stars-cluster stars-4"></div>
+                    <div class="sparkle-star sp-1"></div>
+                    <div class="sparkle-star sp-2"></div>
+                    <div class="sparkle-star sp-3"></div>
+                    <div class="sparkle-star sp-4"></div>
+                    <div class="sparkle-star sp-5"></div>
+                    <div class="sparkle-star sp-6"></div>
+                    <div class="sparkle-star sp-7"></div>
+                    <div class="sparkle-star sp-8"></div>
+                    <div class="nebula-glow nebula-emerald"></div>
+                    <div class="nebula-glow nebula-violet"></div>
+                    <div class="nebula-glow nebula-gold"></div>
+                </div>
+
+                <!-- Cosmic Orbits & Planetary System Stage -->
+                <div class="solar-orbits-stage" id="solar-orbits-stage">
+
+                    <!-- Sun in Center: Junior IT (Perfect 76px Sphere, Strictly Centered Text) -->
+                    <div class="solar-sun-anchor" onclick="triggerSunPulse()" title="Junior IT — Главное солнце знаний" role="button" tabindex="0">
+                        <div class="sun-glow-core">
+                            <div class="sun-inner-flare"></div>
+                            <div class="sun-brand-text">
+                                <span class="sun-brand-junior">Junior</span>
+                                <span class="sun-brand-it">IT</span>
+                            </div>
+                        </div>
+                        <div class="sun-ray-ring ray-ring-1"></div>
+                        <div class="sun-ray-ring ray-ring-2"></div>
+                    </div>
+
+                    <!-- Spacious Concentric Orbits (Radius 135px and 180px) -->
+                    <div class="orbit-circle orbit-c1"></div>
+                    <div class="orbit-circle orbit-c2"></div>
+
+                    <!-- Planet 01: Top (Emerald / Компьютер) -->
+                    <div class="planet-station-wrap p-node-0 active" id="planet-node-0" onclick="selectGalaxyPlanet(0)" role="button" tabindex="0">
+                        <div class="planet-avatar-orb orb-emerald">
+                            <img decoding="async" src="./images/junior_planet_1.webp" alt="Планета 01: Компьютер" class="planet-avatar-img" width="52" height="52" loading="lazy">
+                            <span class="planet-index-pill">01</span>
+                            <div class="planet-halo"></div>
+                        </div>
+                        <span class="planet-floating-label label-pos-top" data-i18n="galaxy_pin_mod0">01. Компьютер</span>
+                    </div>
+
+                    <!-- Planet 02: Right (Violet / Scratch) -->
+                    <div class="planet-station-wrap p-node-1" id="planet-node-1" onclick="selectGalaxyPlanet(1)" role="button" tabindex="0">
+                        <div class="planet-avatar-orb orb-violet">
+                            <img decoding="async" src="./images/junior_planet_2.webp" alt="Планета 02: Scratch" class="planet-avatar-img" width="52" height="52" loading="lazy">
+                            <span class="planet-index-pill">02</span>
+                            <div class="planet-halo"></div>
+                        </div>
+                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod1">02. Scratch</span>
+                    </div>
+
+                    <!-- Planet 03: Bottom (Azure / Код и Логика) -->
+                    <div class="planet-station-wrap p-node-2" id="planet-node-2" onclick="selectGalaxyPlanet(2)" role="button" tabindex="0">
+                        <div class="planet-avatar-orb orb-azure">
+                            <img decoding="async" src="./images/junior_planet_3.webp" alt="Планета 03: Код и Логика" class="planet-avatar-img" width="52" height="52" loading="lazy">
+                            <span class="planet-index-pill">03</span>
+                            <div class="planet-halo"></div>
+                        </div>
+                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod2">03. Код и Логика</span>
+                    </div>
+
+                    <!-- Planet 04: Left (Amber / Проекты) -->
+                    <div class="planet-station-wrap p-node-3" id="planet-node-3" onclick="selectGalaxyPlanet(3)" role="button" tabindex="0">
+                        <div class="planet-avatar-orb orb-amber">
+                            <img decoding="async" src="./images/junior_planet_4.webp" alt="Планета 04: Проекты" class="planet-avatar-img" width="52" height="52" loading="lazy">
+                            <span class="planet-index-pill">04</span>
+                            <div class="planet-halo"></div>
+                        </div>
+                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod3">04. Проекты</span>
+                    </div>
+
+                    <!-- Space Shuttle Visiting Active Planet -->
+                    <div class="galaxy-space-shuttle" id="galaxy-space-shuttle" title="Космический челнок">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L15 8L20 14L15 16L12 22L9 16L4 14L9 8L12 2Z" fill="#FF7A00" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M12 5V18" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
+                            <circle cx="12" cy="11" r="2" fill="#FFFFFF"/>
+                        </svg>
+                        <span class="shuttle-jet-trail"></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Colorful, Interactive Cosmic Console for 8-Year-Old Kids -->
+            <div class="galaxy-col-content">
+                <!-- Header -->
+                <div class="galaxy-header-compact">
+                    <div class="galaxy-badge">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <span data-i18n="galaxy_course_tag">КУРС ДЛЯ ДЕТЕЙ • 8-12 ЛЕТ</span>
+                    </div>
+                    <h3 class="galaxy-title-compact" id="galaxy-main-title" data-i18n="galaxy_title">Kids курс • Космический старт</h3>
+                </div>
+
+                <!-- 4 Colorful Glowing Planet Tabs -->
+                <div class="galaxy-tabs-bar" role="tablist">
+                    <button type="button" class="galaxy-tab-btn tab-emerald active" id="sq-pill-0" onclick="selectGalaxyPlanet(0)" role="tab" aria-selected="true">
+                        <span class="pill-dot dot-green"></span>
+                        <span data-i18n="galaxy_mod1_short">01. Компьютер</span>
+                    </button>
+                    <button type="button" class="galaxy-tab-btn tab-violet" id="sq-pill-1" onclick="selectGalaxyPlanet(1)" role="tab" aria-selected="false">
+                        <span class="pill-dot dot-purple"></span>
+                        <span data-i18n="galaxy_mod2_short">02. Scratch</span>
+                    </button>
+                    <button type="button" class="galaxy-tab-btn tab-azure" id="sq-pill-2" onclick="selectGalaxyPlanet(2)" role="tab" aria-selected="false">
+                        <span class="pill-dot dot-blue"></span>
+                        <span data-i18n="galaxy_mod3_short">03. Код и Логика</span>
+                    </button>
+                    <button type="button" class="galaxy-tab-btn tab-amber" id="sq-pill-3" onclick="selectGalaxyPlanet(3)" role="tab" aria-selected="false">
+                        <span class="pill-dot dot-orange"></span>
+                        <span data-i18n="galaxy_mod4_short">04. Проекты</span>
+                    </button>
+                </div>
+
+                <!-- Colorful Interactive Superpower Scanner Card -->
+                <div class="galaxy-scanner-compact" id="solar-holo-scanner">
+                    <div class="galaxy-scanner-head">
+                        <span class="holo-module-badge" id="holo-mod-badge">ПЛАНЕТА 01</span>
+                        <span class="holo-status-tag" id="holo-status-tag" data-i18n="galaxy_status_active">● СКАНИРОВАНИЕ ОРБИТЫ</span>
+                    </div>
+
+                    <div class="galaxy-scanner-info">
+                        <h4 class="holo-module-title" id="holo-mod-title" data-i18n="galaxy_mod1_title">Планета 1: Компьютер</h4>
+                        <div class="holo-power-banner">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            <span class="holo-module-desc" id="holo-mod-desc" data-i18n="galaxy_mod1_desc">Суперсила: Управляю компьютером как профи!</span>
+                        </div>
+                    </div>
+
+                    <!-- 3 Visual Kid-Friendly Chips with Colorful Icons -->
+                    <div class="holo-skills-box">
+                        <span class="holo-skills-label" data-i18n="galaxy_learned_title">Твоя суперсила на этой планете:</span>
+                        <ul class="holo-skills-list" id="holo-skills-list">
+                            <li class="skill-chip">
+                                <span class="chip-icon-box box-emerald">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </span>
+                                <span id="holo-skill-1" data-i18n="galaxy_mod1_i1">Сам включаю и настраиваю ПК</span>
+                            </li>
+                            <li class="skill-chip">
+                                <span class="chip-icon-box box-amber">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                                    </svg>
+                                </span>
+                                <span id="holo-skill-2" data-i18n="galaxy_mod1_i2">Быстро печатаю без ошибок</span>
+                            </li>
+                            <li class="skill-chip">
+                                <span class="chip-icon-box box-azure">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    </svg>
+                                </span>
+                                <span id="holo-skill-3" data-i18n="galaxy_mod1_i3">Безопасно играю в интернете</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer with ONE Big, Fun, Glowing CTA Button -->
+                <div class="galaxy-footer-compact">
+                    <button type="button" class="galaxy-cta-btn single-big-btn" id="galaxy-cta-btn" onclick="startGalaxyModule()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
+                            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
+                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
+                        </svg>
+                        <span data-i18n="galaxy_btn_start">Полетели на планету!</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         INTERACTIVE WEB ANATOMY MODAL (HEAD = JS BRAIN, TORSO = HTML HEART, LEGS = CSS STYLE)
+         ====================================================================== -->
+    <div class="anatomy-modal-overlay" id="web-anatomy-modal" onclick="closeWebAnatomyModal(event)">
+        <div class="anatomy-modal-window" onclick="event.stopPropagation()">
+            
+            <!-- Modal Header -->
+            <div class="anatomy-modal-header">
+                <div class="anatomy-header-info">
+                    <span class="anatomy-header-badge" data-i18n="anatomy_badge">ВЕБ-РАЗРАБОТКА • АНАТОМИЯ САЙТА</span>
+                    <h3 class="anatomy-header-title" data-i18n="anatomy_title">Анатомия сайта: Нажми на персонажа!</h3>
+                </div>
+                <!-- Close Button -->
+                <button type="button" class="anatomy-close-btn" onclick="closeWebAnatomyModal()" title="Закрыть (Esc)">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+            </div>
+
+            <!-- Modal Main Body: Interactive Character Stage -->
+            <div class="anatomy-modal-body">
+                <div class="anatomy-stage-col">
+
+                    <!-- Character Interactive Sandbox -->
+                    <div class="char-anatomy-sandbox">
+                        <div class="char-stage-glow"></div>
+
+                        <!-- Character Figure with 3 Click Zones -->
+                        <div class="char-figure-container" id="char-figure-container">
+                            <img src="images/anatomy_human.webp" alt="Персонаж веб-разработчик" class="char-real-image" id="char-real-image" loading="lazy" decoding="async" width="280" height="375">
+                            <div class="char-floor-shadow"></div>
+
+                            <!-- Zone 1: HEAD -> JavaScript (Мозги сайта) -->
+                            <div class="char-clickable-zone zone-head" onclick="openBodyPartModal('js')" title="Голова: JavaScript (Мозги сайта)">
+                                <div class="zone-pin pin-left pin-head">
+                                    <span class="pin-badge-icon">
+                                        <svg class="pin-svg svg-js" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M9.5 2A4.5 4.5 0 0 0 5 6.5c0 .7.16 1.37.45 1.97A4.5 4.5 0 0 0 3 12.5c0 2 1.25 3.7 3 4.26V18a3 3 0 0 0 3 3h.5"/>
+                                            <path d="M14.5 2A4.5 4.5 0 0 1 19 6.5c0 .7-.16 1.37-.45 1.97A4.5 4.5 0 0 1 21 12.5c0 2-1.25 3.7-3 4.26V18a3 3 0 0 1-3 3h-.5"/>
+                                            <path d="M12 2v19"/>
+                                            <path d="M8.5 7.5h7"/>
+                                            <path d="M7 12h10"/>
+                                            <path d="M8.5 16.5h7"/>
+                                        </svg>
+                                    </span>
+                                    <div class="pin-badge-text">
+                                        <span class="pin-title" data-i18n="an_pin_js_title">JS</span>
+                                        <span class="pin-subtitle" data-i18n="an_pin_js_sub">Мозги</span>
+                                    </div>
+                                    <span class="pin-radar-ring"></span>
+                                </div>
+                                <div class="zone-highlight-aura aura-head"></div>
+                            </div>
+
+                            <!-- Zone 2: TORSO -> HTML (Сердце и скелет сайта) -->
+                            <div class="char-clickable-zone zone-torso" onclick="openBodyPartModal('html')" title="Тело: HTML (Сердце и основа)">
+                                <div class="zone-pin pin-right pin-torso">
+                                    <span class="pin-badge-icon">
+                                        <svg class="pin-svg svg-html" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="pin-badge-text">
+                                        <span class="pin-title" data-i18n="an_pin_html_title">HTML</span>
+                                        <span class="pin-subtitle" data-i18n="an_pin_html_sub">Сердце</span>
+                                    </div>
+                                    <span class="pin-radar-ring"></span>
+                                </div>
+                                <div class="zone-highlight-aura aura-torso"></div>
+                            </div>
+
+                            <!-- Zone 3: LEGS -> CSS (Одежда и стиль сайта) -->
+                            <div class="char-clickable-zone zone-legs" onclick="openBodyPartModal('css')" title="Ноги: CSS (Одежда и стиль)">
+                                <div class="zone-pin pin-left pin-legs">
+                                    <span class="pin-badge-icon">
+                                        <svg class="pin-svg svg-css" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/>
+                                            <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/>
+                                            <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
+                                            <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/>
+                                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                                        </svg>
+                                    </span>
+                                    <div class="pin-badge-text">
+                                        <span class="pin-title" data-i18n="an_pin_css_title">CSS</span>
+                                        <span class="pin-subtitle" data-i18n="an_pin_css_sub">Одежда</span>
+                                    </div>
+                                    <span class="pin-radar-ring"></span>
+                                </div>
+                                <div class="zone-highlight-aura aura-legs"></div>
+                            </div>
+                        </div>
+
+                        <!-- Friendly Interactive Hint -->
+                        <div class="anatomy-tap-hint">
+                            <svg class="tap-hint-svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="12" y1="16" x2="12.01" y2="16"/>
+                            </svg>
+                            <span class="tap-hint-text" data-i18n="an_guide_text">Нажми на <b>Голову (JS)</b>, <b>Сердце (HTML)</b> или <b>Ноги (CSS)</b>!</span>
+                        </div>
+
+                        <!-- Quick Action Buttons Row (For fast taps / mobile) -->
+                        <div class="anatomy-quick-buttons">
+                            <button type="button" class="anatomy-part-tab btn-head-tab" onclick="openBodyPartModal('js')">
+                                <svg class="tab-svg svg-js" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9.5 2A4.5 4.5 0 0 0 5 6.5c0 .7.16 1.37.45 1.97A4.5 4.5 0 0 0 3 12.5c0 2 1.25 3.7 3 4.26V18a3 3 0 0 0 3 3h.5"/>
+                                    <path d="M14.5 2A4.5 4.5 0 0 1 19 6.5c0 .7-.16 1.37-.45 1.97A4.5 4.5 0 0 1 21 12.5c0 2-1.25 3.7-3 4.26V18a3 3 0 0 1-3 3h-.5"/>
+                                    <path d="M12 2v19"/>
+                                </svg>
+                                <span class="tab-text" data-i18n="an_btn_js_full">1. JS (Мозги)</span>
+                            </button>
+                            <button type="button" class="anatomy-part-tab btn-torso-tab" onclick="openBodyPartModal('html')">
+                                <svg class="tab-svg svg-html" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                                </svg>
+                                <span class="tab-text" data-i18n="an_btn_html_full">2. HTML (Сердце)</span>
+                            </button>
+                            <button type="button" class="anatomy-part-tab btn-legs-tab" onclick="openBodyPartModal('css')">
+                                <svg class="tab-svg svg-css" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/>
+                                </svg>
+                                <span class="tab-text" data-i18n="an_btn_css_full">3. CSS (Одежда)</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- DETAIL POPUP MODAL (MODAL-BOX STYLE FOR TEENAGERS) -->
+            <div class="anatomy-part-popup-overlay" id="anatomy-part-popup" onclick="closeBodyPartModal(event)">
+                <div class="anatomy-part-card" onclick="event.stopPropagation()">
+                    
+                    <!-- Close button -->
+                    <button type="button" class="anatomy-part-card-close" onclick="closeBodyPartModal()" title="Закрыть (Esc)">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+
+                    <!-- Avatar Glowing Icon -->
+                    <div class="part-avatar-glow" id="part-avatar-glow">
+                        <div class="part-avatar-svg-wrap" id="part-avatar-svg-wrap"></div>
+                    </div>
+
+                    <!-- Role Badge -->
+                    <div class="part-badge-wrapper">
+                        <span class="part-role-pill" id="part-role-badge" data-i18n="an_anatomy_card_badge">МОЗГИ САЙТА</span>
+                    </div>
+
+                    <!-- Title -->
+                    <h3 class="part-modal-title" id="part-popup-title" data-i18n="an_anatomy_card_title">JavaScript — Мозги сайта</h3>
+
+                    <!-- Short Friendly Description -->
+                    <p class="part-modal-desc" id="part-popup-desc" data-i18n="an_anatomy_card_desc">
+                        JavaScript — это мозг сайта: думает, принимает решения, запускает анимации и игры!
+                    </p>
+
+                    <!-- Kid Code Snippet -->
+                    <div class="part-code-card">
+                        <div class="part-code-bar">
+                            <span class="part-code-filename" id="part-code-filename">script.js</span>
+                            <span class="part-code-chip" id="part-code-chip" data-i18n="an_anatomy_card_chip">Код для браузера</span>
+                        </div>
+                        <pre class="part-code-body"><code id="part-code-content">button.onclick = () => alert("Клик сработал!");</code></pre>
+                    </div>
+
+                    <!-- Confirm Button -->
+                    <div class="part-modal-actions">
+                        <button type="button" class="part-gotit-btn pulse-glow" onclick="closeBodyPartModal()">
+                            <span data-i18n="an_btn_got_it">Понятно</span>
+                        </button>
+                    </div>
+
+                    <!-- Switcher To Explore Next -->
+                    <div class="part-modal-nav">
+                        <span class="part-nav-label" data-i18n="an_switch_label">Изучить другие части:</span>
+                        <div class="part-nav-buttons">
+                            <button type="button" class="part-nav-chip chip-html" onclick="openBodyPartModal('html')">HTML</button>
+                            <button type="button" class="part-nav-chip chip-css" onclick="openBodyPartModal('css')">CSS</button>
+                            <button type="button" class="part-nav-chip chip-js" onclick="openBodyPartModal('js')">JS</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ======================================================================
+         IT ENGLISH ONBOARDING MODAL (ZERO-SCROLL COMPACT 3D LAYOUT, AGES 8-13)
+         ====================================================================== -->
+    <div class="it-english-modal-overlay" id="it-english-modal" onclick="closeEnglishModal(event)" role="dialog" aria-modal="true" aria-labelledby="it-en-main-title">
+        <div class="it-english-modal-window compact-layout" onclick="event.stopPropagation()">
+            
+            <!-- Close Button (Top Right) -->
+            <button type="button" class="it-en-close-btn" onclick="closeEnglishModal()" title="Закрыть (Esc)" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <!-- LEFT COLUMN: 3D Visual Poster with Interactive Pins -->
+            <div class="it-en-col-poster">
+                <div class="it-en-poster-card">
+                    <img decoding="async" src="./images/it_english_poster.webp" class="it-en-poster-img" alt="IT English 3D Educational Visual Poster" width="896" height="1200" loading="lazy">
+                    <!-- Interactive Floating Zone Pins -->
+                    <button type="button" class="it-poster-pin pin-gaming" onclick="switchEnglishTab(0)" title="Gaming Zone">
+                        <span class="pin-radar"></span>
+                        <span>Gaming</span>
+                    </button>
+                    <button type="button" class="it-poster-pin pin-coding" onclick="switchEnglishTab(1)" title="Coding Zone">
+                        <span class="pin-radar"></span>
+                        <span>Coding</span>
+                    </button>
+                    <button type="button" class="it-poster-pin pin-global" onclick="switchEnglishTab(2)" title="Global World">
+                        <span class="pin-radar"></span>
+                        <span>Global</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Header, Tabs, Active Zone, and CTA -->
+            <div class="it-en-col-content">
+                <!-- Header -->
+                <div class="it-en-header-compact">
+                    <div class="it-en-badge">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <span data-i18n="en_onboard_badge">IT ENGLISH • ТВОЙ СТАРТ</span>
+                    </div>
+                    <h3 class="it-en-title-compact" id="it-en-main-title" data-i18n="en_onboard_title">Открой весь мир IT через английский!</h3>
+                </div>
+
+                <!-- Segmented Tabs Navigation -->
+                <div class="it-en-tabs-bar" role="tablist">
+                    <button type="button" class="it-en-tab-btn active" id="it-en-tab-0" onclick="switchEnglishTab(0)" role="tab" aria-selected="true" aria-controls="it-en-panel-0">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="5" width="14" height="15" rx="3"></rect>
+                            <path d="M7 3h12a2 2 0 0 1 2 2v13"></path>
+                        </svg>
+                        <span data-i18n="en_tab_1">1. Gaming • Карточки</span>
+                    </button>
+                    <button type="button" class="it-en-tab-btn" id="it-en-tab-1" onclick="switchEnglishTab(1)" role="tab" aria-selected="false" aria-controls="it-en-panel-1">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <span data-i18n="en_tab_2">2. Coding • Диалоги</span>
+                    </button>
+                    <button type="button" class="it-en-tab-btn" id="it-en-tab-2" onclick="switchEnglishTab(2)" role="tab" aria-selected="false" aria-controls="it-en-panel-2">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        <span data-i18n="en_tab_3">3. Global • Суперсилы</span>
+                    </button>
+                </div>
+
+                <!-- Content Panels Area (Compact, No-Scroll) -->
+                <div class="it-en-panels-compact">
+                    <!-- PANEL 1: GAMING ZONE (3D Flipcards) -->
+                    <div class="it-en-panel active" id="it-en-panel-0" role="tabpanel">
+                        <div class="it-zone-hint">
+                            <span data-i18n="en_t1_hint">Учимся без скучных правил: запоминаем через карточки</span>
+                        </div>
+                        <div class="it-cards-grid-compact">
+                            <!-- Card 1: CODE -->
+                            <div class="it-flipcard" onclick="flipEnglishCard(this)" tabindex="0" role="button" aria-label="Карточка Code">
+                                <div class="it-flipcard-inner">
+                                    <div class="it-flipcard-front">
+                                        <span class="it-fc-tag tag-code">CODE</span>
+                                        <div class="it-fc-graphic code-graphic">
+                                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="16 18 22 12 16 6"></polyline>
+                                                <polyline points="8 6 2 12 8 18"></polyline>
+                                            </svg>
+                                        </div>
+                                        <span class="it-fc-phonetic">[koʊd]</span>
+                                        <span class="it-fc-tap-prompt" data-i18n="en_card_flip_prompt">Нажми</span>
+                                    </div>
+                                    <div class="it-flipcard-back back-code">
+                                        <span class="it-fc-tag-back">ПЕРЕВОД</span>
+                                        <h4 class="it-fc-meaning" data-i18n="en_card_code_trans">[koʊd] • Код</h4>
+                                        <p class="it-fc-desc" data-i18n="en_card_code_desc">Инструкции для компьютера</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2: BUG -->
+                            <div class="it-flipcard" onclick="flipEnglishCard(this)" tabindex="0" role="button" aria-label="Карточка Bug">
+                                <div class="it-flipcard-inner">
+                                    <div class="it-flipcard-front">
+                                        <span class="it-fc-tag tag-bug">BUG</span>
+                                        <div class="it-fc-graphic bug-graphic">
+                                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <rect width="8" height="14" x="8" y="6" rx="4"></rect>
+                                                <path d="m19 7-3 2"></path>
+                                                <path d="m5 7 3 2"></path>
+                                                <path d="m19 19-3-2"></path>
+                                                <path d="m5 19 3-2"></path>
+                                                <path d="M20 13h-4"></path>
+                                                <path d="M4 13h4"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="it-fc-phonetic">[bʌɡ]</span>
+                                        <span class="it-fc-tap-prompt" data-i18n="en_card_flip_prompt">Нажми</span>
+                                    </div>
+                                    <div class="it-flipcard-back back-bug">
+                                        <span class="it-fc-tag-back">ПЕРЕВОД</span>
+                                        <h4 class="it-fc-meaning" data-i18n="en_card_bug_trans">[bʌɡ] • Баг</h4>
+                                        <p class="it-fc-desc" data-i18n="en_card_bug_desc">Ошибка в коде</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3: VICTORY -->
+                            <div class="it-flipcard" onclick="flipEnglishCard(this)" tabindex="0" role="button" aria-label="Карточка Victory">
+                                <div class="it-flipcard-inner">
+                                    <div class="it-flipcard-front">
+                                        <span class="it-fc-tag tag-win">VICTORY</span>
+                                        <div class="it-fc-graphic win-graphic">
+                                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                            </svg>
+                                        </div>
+                                        <span class="it-fc-phonetic">[ˈvɪktəri]</span>
+                                        <span class="it-fc-tap-prompt" data-i18n="en_card_flip_prompt">Нажми</span>
+                                    </div>
+                                    <div class="it-flipcard-back back-win">
+                                        <span class="it-fc-tag-back">ПЕРЕВОД</span>
+                                        <h4 class="it-fc-meaning" data-i18n="en_card_victory_trans">[ˈvɪktəri] • Победа</h4>
+                                        <p class="it-fc-desc" data-i18n="en_card_victory_desc">Успешный запуск игры</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL 2: CODING ZONE (Live Dialogue) -->
+                    <div class="it-en-panel" id="it-en-panel-1" role="tabpanel">
+                        <div class="it-zone-hint">
+                            <span data-i18n="en_t2_hint">Говорим с первого занятия: игры, ролики и IT-проекты</span>
+                        </div>
+                        <div class="it-dialogue-compact">
+                            <div class="it-bubble bubble-student">
+                                <div class="it-bubble-avatar student-avatar">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div class="it-bubble-body">
+                                    <span class="it-bubble-author">Student</span>
+                                    <p class="it-bubble-en" data-i18n="en_bubble_1">"How do I fix this bug in my code?"</p>
+                                    <p class="it-bubble-ru" data-i18n="en_bubble_1_sub">Как мне исправить этот баг в коде?</p>
+                                </div>
+                            </div>
+                            <div class="it-bubble bubble-mentor">
+                                <div class="it-bubble-avatar mentor-avatar">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div>
+                                <div class="it-bubble-body">
+                                    <span class="it-bubble-author">IT Mentor</span>
+                                    <p class="it-bubble-en" data-i18n="en_bubble_2">"Let me help you! Check line 12 and use a loop!"</p>
+                                    <p class="it-bubble-ru" data-i18n="en_bubble_2_sub">Давай помогу! Проверь 12-ю строку и используй цикл!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL 3: GLOBAL WORLD (Superpowers) -->
+                    <div class="it-en-panel" id="it-en-panel-2" role="tabpanel">
+                        <div class="it-zone-hint">
+                            <span data-i18n="en_t3_title">Что ты получишь благодаря IT English</span>
+                        </div>
+                        <div class="it-powers-compact-list">
+                            <div class="it-power-item">
+                                <div class="it-power-mini-icon bg-games">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                                    </svg>
+                                </div>
+                                <div class="it-power-mini-text">
+                                    <strong data-i18n="en_p1_title">Игры и контент без субтитров</strong>
+                                    <span data-i18n="en_p1_desc">Играй в мировые релизы в день выхода</span>
+                                </div>
+                            </div>
+                            <div class="it-power-item">
+                                <div class="it-power-mini-icon bg-code">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF7A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 18 22 12 16 6"></polyline>
+                                        <polyline points="8 6 2 12 8 18"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="it-power-mini-text">
+                                    <strong data-i18n="en_p2_title">Свободный код и документация</strong>
+                                    <span data-i18n="en_p2_desc">Понимай ошибки консоли и пиши чистый код</span>
+                                </div>
+                            </div>
+                            <div class="it-power-item">
+                                <div class="it-power-mini-icon bg-global">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                    </svg>
+                                </div>
+                                <div class="it-power-mini-text">
+                                    <strong data-i18n="en_p3_title">Друзья и менторы по всему миру</strong>
+                                    <span data-i18n="en_p3_desc">Тиммейты и хакатоны в 190+ странах</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer CTA Button -->
+                <div class="it-en-footer-compact">
+                    <button type="button" class="it-en-cta-btn" onclick="enrollTrialLesson()">
+                        <span data-i18n="en_cta_btn">Записаться на пробный урок</span>
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         COINSHOP ONLINE STORE MODAL (8 GIFTS WITH VECTOR GRAPHICS)
+         ====================================================================== -->
+    <div class="coinshop-modal-overlay" id="coinshop-modal" onclick="closeCoinShopModal(event)" role="dialog" aria-modal="true" aria-labelledby="coinshop-modal-title">
+        <div class="coinshop-modal-window" onclick="event.stopPropagation()">
+            <!-- Close Button (Top Right) -->
+            <button type="button" class="coinshop-modal-close" onclick="closeCoinShopModal()" title="Закрыть (Esc)" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="coinshop-modal-header">
+                <div class="coinshop-modal-badge">
+                    <img decoding="async" loading="lazy" src="./images/coin_gold.webp" class="inline-coin-img" alt="Coin" width="20" height="20">
+                    <span data-i18n="coinshop_modal_tag">МАГАЗИН ЦЕЛЕЙ • COINSHOP</span><span class="pp-gift-count">8</span>
+                </div>
+                <h3 class="coinshop-modal-title" id="coinshop-modal-title" data-i18n="s5_title">Выбери подарок за успехи в учёбе!</h3>
+                <p class="coinshop-modal-desc" data-i18n="s5_desc">За каждый сданный проект на платформе ты копишь Junior Coins и обмениваешь их на реальные призы:</p>
+            </div>
+
+            <!-- 8 Gifts Grid with Professional Vector Graphics -->
+            <div class="coinshop-items-grid">
+                <!-- 1. VR-очки -->
+                <div class="game-3d-card gift-shop-item selected" onclick="pickGift(this, 'VR-ko\'zoynak', 'VR-очки')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_vr.webp" alt="VR-очки" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_vr">VR-очки</span>
+                    <button type="button" class="gift-select-btn">✓ Выбрано</button>
+                </div>
+
+                <!-- 2. Смартфон -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'Smartfon', 'Смартфон')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_phone.webp" alt="Смартфон" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_phone">Смартфон</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 3. Игровой Ноутбук -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'O\'yin noutbuki', 'Игровой ноутбук')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_laptop.webp" alt="Игровой ноутбук" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_lap1">Игровой ноутбук</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 4. Ультрабук -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'Ultrabuk', 'Ультрабук')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_ultrabook.webp" alt="Ультрабук" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_lap2">Ультрабук</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 5. Планшет -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'Planshet', 'Планшет')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_tablet.webp" alt="Планшет" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_tab">Планшет</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 6. Умная Колонка -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'Aqlli Karnay', 'Умная колонка')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_speaker.webp" alt="Умная колонка" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_alisa">Умная колонка</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 7. Наушники -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'Quloqchinlar', 'Наушники')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_headphones.webp" alt="Наушники" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_head">Наушники</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+
+                <!-- 8. Игровой набор (Клавиатура + мышь) -->
+                <div class="game-3d-card gift-shop-item" onclick="pickGift(this, 'O\'yin to\'plami', 'Игровой набор')">
+                    <div class="gift-img-wrap">
+                        <img src="images/gift_keyboard.webp" alt="Игровой набор" class="gift-photo-img" loading="lazy" decoding="async" width="76" height="76">
+                    </div>
+                    <span data-i18n="g_thermos">Игровой набор</span>
+                    <button type="button" class="gift-select-btn">Выбрать</button>
+                </div>
+            </div>
+
+            <!-- Selected Target Banner + Save Button -->
+            <div class="coinshop-modal-footer">
+                <div class="chosen-banner-bar" id="chosen-gift-banner">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF6B00">
+                        <circle cx="12" cy="12" r="10" stroke="#FF6B00" stroke-width="2" fill="none"/>
+                        <circle cx="12" cy="12" r="6" fill="#FF6B00"/>
+                    </svg>
+                    <span><strong data-i18n="your_goal_lbl">Твои цели на курс:</strong></span>
+                    <strong class="highlight-orange" id="chosen-gift-name">VR-очки</strong>
+                </div>
+                <button type="button" class="primary-big-btn coinshop-save-btn pulse-glow" onclick="closeCoinShopModal()">
+                    <span data-i18n="btn_save_goal">Сохранить цель</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         CERTIFICATE DETAIL MODAL (1:1 FROM PLATFORM SCREENSHOT)
+         ====================================================================== -->
+    <div class="cert-modal-overlay" id="cert-detail-modal" onclick="closeCertModal(event)" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title">
+        <div class="cert-modal-window" onclick="event.stopPropagation()">
+            <!-- Close Button -->
+            <button type="button" class="cert-modal-close" onclick="closeCertModal()" title="Закрыть (Esc)" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <!-- Modal Header -->
+            <div class="cert-modal-header">
+                <div class="cert-modal-ribbon-tag">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="7"/>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                    </svg>
+                    <span data-i18n="cert_modal_ribbon">TASDIQLANGAN SERTIFIKAT</span>
+                </div>
+                <h3 class="cert-modal-title" id="cert-modal-title">HTML</h3>
+                <span class="cert-modal-course-name" id="cert-modal-course" data-i18n="certs_course_web">Веб программирование</span>
+            </div>
+
+            <!-- Full Certificate Artwork Display Frame -->
+            <div class="cert-canvas-frame">
+                <img decoding="async" src="./images/cert_preview_html.webp" alt="Junior IT Academy Sertifikati" class="cert-canvas-image" id="cert-canvas-img" loading="lazy" width="832" height="512">
+            </div>
+
+            <!-- 4 Metadata Cards -->
+            <div class="cert-meta-grid">
+                <div class="cert-meta-box">
+                    <span class="meta-label" data-i18n="cert_meta_student">O'quvchi</span>
+                    <strong class="meta-value" id="cert-meta-student-val">OnBoarding Mentor</strong>
+                </div>
+                <div class="cert-meta-box">
+                    <span class="meta-label" data-i18n="cert_meta_finish_date">Modul tugatilgan sana</span>
+                    <strong class="meta-value" id="cert-meta-end-date">15.07.2026</strong>
+                </div>
+                <div class="cert-meta-box">
+                    <span class="meta-label" data-i18n="cert_meta_issue_date">Sertifikat berilgan sana</span>
+                    <strong class="meta-value" id="cert-meta-issue-date">18.08.2026</strong>
+                </div>
+                <div class="cert-meta-box">
+                    <span class="meta-label" data-i18n="cert_meta_number">Sertifikat raqami</span>
+                    <strong class="meta-value meta-id" id="cert-meta-number-val">JR-2026-M86-S3371-6FCE32</strong>
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <button type="button" class="primary-big-btn cert-download-btn pulse-glow" onclick="downloadCertificate()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                <span data-i18n="cert_btn_download">Sertifikatni yuklab olish</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         TELEPORT TO LMS COUNTDOWN MODAL
+         ====================================================================== -->
+    <div class="modal-overlay" id="launch-modal">
+        <div class="modal-box">
+            <div class="modal-avatar-glow">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+            </div>
+            <h3 class="modal-title" data-i18n="modal_wave_title">Увидимся на первом уроке!</h3>
+            <p class="modal-desc" id="modal-desc" data-i18n="modal_wave_desc">Переносим тебя на обучающую платформу...</p>
+            <a href="https://go.junior-it.uz/login" class="primary-big-btn pulse-glow" data-i18n="modal_btn_now">Открыть LMS прямо сейчас</a>
+        </div>
+    </div>
+
+    <!-- Dedicated High-Performance Celebration Canvas for Particles & Confetti -->
+    <canvas id="celebration-canvas"></canvas>
+
+    <!-- ======================================================================
+         CDN LIBRARIES
+         ====================================================================== -->
+    <!-- Canvas Confetti (For Salutes & Celebrations) -->
+    <script async src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Internationalization & Content Dictionary -->
+    <script src="translations.js?v=20261122-rev1"></script>
+
+    <!-- Custom Script Engine -->
+    <script src="script.js?v=20261122-sl5"></script>
+    <script src="transitions.js?v=20261121-fx2"></script>
+    <script src="island-game.js?v=20261122-m1"></script>
+    <script src="maze-drag.js?v=20261122-sl5"></script>
+    <script src="course-choice.js?v=20261028-onboarding2"></script>
+    <script src="map-opportunities.js?v=20261120-map5"></script>
+    <script src="team-slide.js?v=20261120-team1"></script>
+    <script src="platform-preview.js?v=20261028-onboarding2"></script>
+    <script src="course-program.js?v=20261121-noroute"></script>
+    <script src="perf-prefetch.js?v=20261121-perf2"></script>
+</body>
+</html>
+
+
