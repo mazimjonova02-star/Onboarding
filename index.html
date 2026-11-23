@@ -11,18 +11,18 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
     <!-- Custom Style -->
-    <link rel="stylesheet" href="style.css?v=20261123-r1">
-    <link rel="stylesheet" href="platform-preview.css?v=20261123-r1">
-    <link rel="stylesheet" href="platform-home.css?v=20261123-r1">
-    <link rel="stylesheet" href="practice-enhancements.css?v=20261123-r1">
-    <link rel="stylesheet" href="course-program.css?v=20261123-r1">
-    <link rel="stylesheet" href="sky-bg.css?v=20261123-r1">
-    <link rel="stylesheet" href="onboarding-polish.css?v=20261123-r1">
-    <link rel="stylesheet" href="map-slide.css?v=20261123-r1">
-    <link rel="stylesheet" href="team-slide.css?v=20261123-r1">
-    <link rel="stylesheet" href="transitions.css?v=20261123-r1">
-    <link rel="stylesheet" href="island-slide.css?v=20261123-r1">
-    <link rel="stylesheet" href="maze-theme.css?v=20261123-r1">
+    <link rel="stylesheet" href="style.css?v=20261123-r2">
+    <link rel="stylesheet" href="platform-preview.css?v=20261123-r2">
+    <link rel="stylesheet" href="platform-home.css?v=20261123-r2">
+    <link rel="stylesheet" href="practice-enhancements.css?v=20261123-r2">
+    <link rel="stylesheet" href="course-program.css?v=20261123-r2">
+    <link rel="stylesheet" href="sky-bg.css?v=20261123-r2">
+    <link rel="stylesheet" href="onboarding-polish.css?v=20261123-r2">
+    <link rel="stylesheet" href="map-slide.css?v=20261123-r2">
+    <link rel="stylesheet" href="team-slide.css?v=20261123-r2">
+    <link rel="stylesheet" href="transitions.css?v=20261123-r2">
+    <link rel="stylesheet" href="island-slide.css?v=20261123-r2">
+    <link rel="stylesheet" href="maze-theme.css?v=20261123-r2">
 </head>
 <body class="theme-bright">
 
@@ -1179,45 +1179,8 @@
                     <div class="orbit-circle orbit-c1"></div>
                     <div class="orbit-circle orbit-c2"></div>
 
-                    <!-- Planet 01: Top (Emerald / Компьютер) -->
-                    <div class="planet-station-wrap p-node-0 active" id="planet-node-0" onclick="selectGalaxyPlanet(0)" role="button" tabindex="0">
-                        <div class="planet-avatar-orb orb-emerald">
-                            <img decoding="async" src="./images/junior_planet_1.webp" alt="Планета 01: Компьютер" class="planet-avatar-img" width="52" height="52" loading="lazy">
-                            <span class="planet-index-pill">01</span>
-                            <div class="planet-halo"></div>
-                        </div>
-                        <span class="planet-floating-label label-pos-top" data-i18n="galaxy_pin_mod0">01. Компьютер</span>
-                    </div>
-
-                    <!-- Planet 02: Right (Violet / Scratch) -->
-                    <div class="planet-station-wrap p-node-1" id="planet-node-1" onclick="selectGalaxyPlanet(1)" role="button" tabindex="0">
-                        <div class="planet-avatar-orb orb-violet">
-                            <img decoding="async" src="./images/junior_planet_2.webp" alt="Планета 02: Scratch" class="planet-avatar-img" width="52" height="52" loading="lazy">
-                            <span class="planet-index-pill">02</span>
-                            <div class="planet-halo"></div>
-                        </div>
-                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod1">02. Scratch</span>
-                    </div>
-
-                    <!-- Planet 03: Bottom (Azure / Код и Логика) -->
-                    <div class="planet-station-wrap p-node-2" id="planet-node-2" onclick="selectGalaxyPlanet(2)" role="button" tabindex="0">
-                        <div class="planet-avatar-orb orb-azure">
-                            <img decoding="async" src="./images/junior_planet_3.webp" alt="Планета 03: Код и Логика" class="planet-avatar-img" width="52" height="52" loading="lazy">
-                            <span class="planet-index-pill">03</span>
-                            <div class="planet-halo"></div>
-                        </div>
-                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod2">03. Код и Логика</span>
-                    </div>
-
-                    <!-- Planet 04: Left (Amber / Проекты) -->
-                    <div class="planet-station-wrap p-node-3" id="planet-node-3" onclick="selectGalaxyPlanet(3)" role="button" tabindex="0">
-                        <div class="planet-avatar-orb orb-amber">
-                            <img decoding="async" src="./images/junior_planet_4.webp" alt="Планета 04: Проекты" class="planet-avatar-img" width="52" height="52" loading="lazy">
-                            <span class="planet-index-pill">04</span>
-                            <div class="planet-halo"></div>
-                        </div>
-                        <span class="planet-floating-label label-pos-bottom" data-i18n="galaxy_pin_mod3">04. Проекты</span>
-                    </div>
+                    <!-- 7 планет модулей создаются в script.js (galaxyModulesData) -->
+                    <div class="galaxy-planets-layer" id="galaxy-planets"></div>
 
                     <!-- Space Shuttle Visiting Active Planet -->
                     <div class="galaxy-space-shuttle" id="galaxy-space-shuttle" title="Космический челнок">
@@ -1242,34 +1205,17 @@
                         </svg>
                         <span data-i18n="galaxy_course_tag">КУРС ДЛЯ ДЕТЕЙ • 8-12 ЛЕТ</span>
                     </div>
-                    <h3 class="galaxy-title-compact" id="galaxy-main-title" data-i18n="galaxy_title">Kids курс • Космический старт</h3>
+                    <h3 class="galaxy-title-compact" id="galaxy-main-title" data-i18n="galaxy_title">Навыки будущего</h3>
                 </div>
 
                 <!-- 4 Colorful Glowing Planet Tabs -->
-                <div class="galaxy-tabs-bar" role="tablist">
-                    <button type="button" class="galaxy-tab-btn tab-emerald active" id="sq-pill-0" onclick="selectGalaxyPlanet(0)" role="tab" aria-selected="true">
-                        <span class="pill-dot dot-green"></span>
-                        <span data-i18n="galaxy_mod1_short">01. Компьютер</span>
-                    </button>
-                    <button type="button" class="galaxy-tab-btn tab-violet" id="sq-pill-1" onclick="selectGalaxyPlanet(1)" role="tab" aria-selected="false">
-                        <span class="pill-dot dot-purple"></span>
-                        <span data-i18n="galaxy_mod2_short">02. Scratch</span>
-                    </button>
-                    <button type="button" class="galaxy-tab-btn tab-azure" id="sq-pill-2" onclick="selectGalaxyPlanet(2)" role="tab" aria-selected="false">
-                        <span class="pill-dot dot-blue"></span>
-                        <span data-i18n="galaxy_mod3_short">03. Код и Логика</span>
-                    </button>
-                    <button type="button" class="galaxy-tab-btn tab-amber" id="sq-pill-3" onclick="selectGalaxyPlanet(3)" role="tab" aria-selected="false">
-                        <span class="pill-dot dot-orange"></span>
-                        <span data-i18n="galaxy_mod4_short">04. Проекты</span>
-                    </button>
-                </div>
+                <div class="galaxy-tabs-bar" id="galaxy-tabs" role="tablist"></div>
 
                 <!-- Colorful Interactive Superpower Scanner Card -->
                 <div class="galaxy-scanner-compact" id="solar-holo-scanner">
                     <div class="galaxy-scanner-head">
                         <span class="holo-module-badge" id="holo-mod-badge">ПЛАНЕТА 01</span>
-                        <span class="holo-status-tag" id="holo-status-tag" data-i18n="galaxy_status_active">● СКАНИРОВАНИЕ ОРБИТЫ</span>
+                        <span class="holo-status-tag" id="holo-status-tag" data-i18n="galaxy_status_active">● 30 занятий</span>
                     </div>
 
                     <div class="galaxy-scanner-info">
@@ -1967,19 +1913,19 @@
     <script async src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <!-- Internationalization & Content Dictionary -->
-    <script src="translations.js?v=20261123-r1"></script>
+    <script src="translations.js?v=20261123-r2"></script>
 
     <!-- Custom Script Engine -->
-    <script src="script.js?v=20261123-r1"></script>
-    <script src="transitions.js?v=20261123-r1"></script>
-    <script src="island-game.js?v=20261123-r1"></script>
-    <script src="maze-drag.js?v=20261123-r1"></script>
-    <script src="course-choice.js?v=20261123-r1"></script>
-    <script src="map-opportunities.js?v=20261123-r1"></script>
-    <script src="team-slide.js?v=20261123-r1"></script>
-    <script src="platform-preview.js?v=20261123-r1"></script>
-    <script src="course-program.js?v=20261123-r1"></script>
-    <script src="perf-prefetch.js?v=20261123-r1"></script>
+    <script src="script.js?v=20261123-r2"></script>
+    <script src="transitions.js?v=20261123-r2"></script>
+    <script src="island-game.js?v=20261123-r2"></script>
+    <script src="maze-drag.js?v=20261123-r2"></script>
+    <script src="course-choice.js?v=20261123-r2"></script>
+    <script src="map-opportunities.js?v=20261123-r2"></script>
+    <script src="team-slide.js?v=20261123-r2"></script>
+    <script src="platform-preview.js?v=20261123-r2"></script>
+    <script src="course-program.js?v=20261123-r2"></script>
+    <script src="perf-prefetch.js?v=20261123-r2"></script>
 </body>
 </html>
 
