@@ -11,18 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Space+Grotesk:wght@700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
     <!-- Custom Style -->
-    <link rel="stylesheet" href="style.css?v=20261123-r2">
-    <link rel="stylesheet" href="platform-preview.css?v=20261123-r2">
-    <link rel="stylesheet" href="platform-home.css?v=20261123-r2">
-    <link rel="stylesheet" href="practice-enhancements.css?v=20261123-r2">
-    <link rel="stylesheet" href="course-program.css?v=20261123-r2">
-    <link rel="stylesheet" href="sky-bg.css?v=20261123-r2">
-    <link rel="stylesheet" href="onboarding-polish.css?v=20261123-r2">
-    <link rel="stylesheet" href="map-slide.css?v=20261123-r2">
-    <link rel="stylesheet" href="team-slide.css?v=20261123-r2">
-    <link rel="stylesheet" href="transitions.css?v=20261123-r2">
-    <link rel="stylesheet" href="island-slide.css?v=20261123-r2">
-    <link rel="stylesheet" href="maze-theme.css?v=20261123-r2">
+    <link rel="stylesheet" href="style.css?v=20261123-r3">
+    <link rel="stylesheet" href="platform-preview.css?v=20261123-r3">
+    <link rel="stylesheet" href="platform-home.css?v=20261123-r3">
+    <link rel="stylesheet" href="practice-enhancements.css?v=20261123-r3">
+    <link rel="stylesheet" href="course-program.css?v=20261123-r3">
+    <link rel="stylesheet" href="sky-bg.css?v=20261123-r3">
+    <link rel="stylesheet" href="onboarding-polish.css?v=20261123-r3">
+    <link rel="stylesheet" href="galaxy-map.css?v=20261123-r3">
+    <link rel="stylesheet" href="map-slide.css?v=20261123-r3">
+    <link rel="stylesheet" href="team-slide.css?v=20261123-r3">
+    <link rel="stylesheet" href="transitions.css?v=20261123-r3">
+    <link rel="stylesheet" href="island-slide.css?v=20261123-r3">
+    <link rel="stylesheet" href="maze-theme.css?v=20261123-r3">
 </head>
 <body class="theme-bright">
 
@@ -1130,154 +1131,55 @@
          JUNIOR KURS COSMIC MISSION MODAL (ZERO-SCROLL COMPACT 3D SPLIT LAYOUT)
          ====================================================================== -->
     <div class="galaxy-modal-overlay" id="junior-course-modal" onclick="closeJuniorCourseMap(event)" role="dialog" aria-modal="true" aria-labelledby="galaxy-main-title">
-        <div class="galaxy-modal-window compact-layout" onclick="event.stopPropagation()">
-            
-            <!-- Close Button (Top Right) -->
-            <button type="button" class="galaxy-close-btn" onclick="closeJuniorCourseMap()" title="Закрыть (Esc)" aria-label="Закрыть">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
+        <div class="gm-window" onclick="event.stopPropagation()">
 
-            <!-- LEFT COLUMN: Spacious Cosmic Solar System with Centered Sun & 4 Planets -->
-            <div class="solar-cosmos-col" id="solar-cosmos-stage">
-                
-                <!-- Rich Deep Space Stars, Sparkles & Nebulae -->
-                <div class="solar-deep-space">
-                    <div class="stars-cluster stars-1"></div>
-                    <div class="stars-cluster stars-2"></div>
-                    <div class="stars-cluster stars-3"></div>
-                    <div class="stars-cluster stars-4"></div>
-                    <div class="sparkle-star sp-1"></div>
-                    <div class="sparkle-star sp-2"></div>
-                    <div class="sparkle-star sp-3"></div>
-                    <div class="sparkle-star sp-4"></div>
-                    <div class="sparkle-star sp-5"></div>
-                    <div class="sparkle-star sp-6"></div>
-                    <div class="sparkle-star sp-7"></div>
-                    <div class="sparkle-star sp-8"></div>
-                    <div class="nebula-glow nebula-emerald"></div>
-                    <div class="nebula-glow nebula-violet"></div>
-                    <div class="nebula-glow nebula-gold"></div>
-                </div>
-
-                <!-- Cosmic Orbits & Planetary System Stage -->
-                <div class="solar-orbits-stage" id="solar-orbits-stage">
-
-                    <!-- Sun in Center: Junior IT (Perfect 76px Sphere, Strictly Centered Text) -->
-                    <div class="solar-sun-anchor" onclick="triggerSunPulse()" title="Junior IT — Главное солнце знаний" role="button" tabindex="0">
-                        <div class="sun-glow-core">
-                            <div class="sun-inner-flare"></div>
-                            <div class="sun-brand-text">
-                                <span class="sun-brand-junior">Junior</span>
-                                <span class="sun-brand-it">IT</span>
-                            </div>
-                        </div>
-                        <div class="sun-ray-ring ray-ring-1"></div>
-                        <div class="sun-ray-ring ray-ring-2"></div>
-                    </div>
-
-                    <!-- Spacious Concentric Orbits (Radius 135px and 180px) -->
-                    <div class="orbit-circle orbit-c1"></div>
-                    <div class="orbit-circle orbit-c2"></div>
-
-                    <!-- 7 планет модулей создаются в script.js (galaxyModulesData) -->
-                    <div class="galaxy-planets-layer" id="galaxy-planets"></div>
-
-                    <!-- Space Shuttle Visiting Active Planet -->
-                    <div class="galaxy-space-shuttle" id="galaxy-space-shuttle" title="Космический челнок">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M12 2L15 8L20 14L15 16L12 22L9 16L4 14L9 8L12 2Z" fill="#FF7A00" stroke="#FFFFFF" stroke-width="1.5" stroke-linejoin="round"/>
-                            <path d="M12 5V18" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round"/>
-                            <circle cx="12" cy="11" r="2" fill="#FFFFFF"/>
-                        </svg>
-                        <span class="shuttle-jet-trail"></span>
-                    </div>
-
-                </div>
+            <div class="gm-sky" aria-hidden="true">
+                <svg class="gm-orbits" viewBox="0 0 1000 600" preserveAspectRatio="none"><ellipse cx="20" cy="190" rx="330" ry="150"/><ellipse cx="20" cy="190" rx="560" ry="215"/><ellipse cx="20" cy="190" rx="790" ry="270"/><ellipse cx="20" cy="190" rx="1010" ry="330"/></svg>
+                <i class="gm-spark a"></i><i class="gm-spark b"></i><i class="gm-spark c"></i><i class="gm-spark d"></i><i class="gm-spark e"></i>
+                <i class="gm-sun" onclick="triggerSunPulse()" title="Junior IT"></i>
+                <i class="gm-cloud c1"></i><i class="gm-cloud c2"></i>
+                <svg class="gm-mount" viewBox="0 0 1000 140" preserveAspectRatio="none"><path d="M0 140V70l70-36 80 40 90-52 100 62 80-34 110 56 90-46 120 50 90-44 90 40 80-30v84z" fill="#5a3aa8"/><path d="M0 140V100l90-30 70 24 110-42 90 50 110-34 100 42 120-38 90 36 110-30 100 36v50z" fill="#7a4cc0"/><path d="M0 140v-18l100-24 90 18 120-26 110 20 130-22 110 22 120-18 110 20 110-14v42z" fill="#9a5fd0" opacity=".9"/></svg>
             </div>
 
-            <!-- RIGHT COLUMN: Colorful, Interactive Cosmic Console for 8-Year-Old Kids -->
-            <div class="galaxy-col-content">
-                <!-- Header -->
-                <div class="galaxy-header-compact">
-                    <div class="galaxy-badge">
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                        </svg>
-                        <span data-i18n="galaxy_course_tag">КУРС ДЛЯ ДЕТЕЙ • 8-12 ЛЕТ</span>
+            <button type="button" class="galaxy-close-btn gm-close" onclick="closeJuniorCourseMap()" title="Закрыть (Esc)" aria-label="Закрыть">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+
+            <div class="gm-pill">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M5 19l4-1 9-9a3 3 0 0 0-4-4l-9 9z" fill="#ffb02e" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/><circle cx="14" cy="10" r="1.6" fill="#fff"/><path d="M5 19c-1 0-2-1-2-2 1-2 3-2 4-1z" fill="#ff6a2e"/></svg>
+                <h3 id="galaxy-main-title">Навыки будущего</h3>
+            </div>
+
+            <!-- 7 планет создаются в script.js (galaxyModulesData) -->
+            <div class="gm-planets" id="galaxy-planets" role="tablist"></div>
+
+            <div class="gm-card" id="solar-holo-scanner">
+                <img class="gm-hero" src="./images/hero_explorer.svg" alt="" width="300" height="420" decoding="async">
+                <div class="gm-main">
+                    <div class="gm-titlerow">
+                        <img class="gm-ticon" id="gm-ticon" src="./images/module_planet_1.webp" alt="" width="64" height="64" decoding="async">
+                        <h4 class="gm-name" id="holo-mod-title">Компьютерная грамотность</h4>
                     </div>
-                    <h3 class="galaxy-title-compact" id="galaxy-main-title" data-i18n="galaxy_title">Навыки будущего</h3>
-                </div>
-
-                <!-- 4 Colorful Glowing Planet Tabs -->
-                <div class="galaxy-tabs-bar" id="galaxy-tabs" role="tablist"></div>
-
-                <!-- Colorful Interactive Superpower Scanner Card -->
-                <div class="galaxy-scanner-compact" id="solar-holo-scanner">
-                    <div class="galaxy-scanner-head">
-                        <span class="holo-module-badge" id="holo-mod-badge">ПЛАНЕТА 01</span>
-                        <span class="holo-status-tag" id="holo-status-tag" data-i18n="galaxy_status_active">● 30 занятий</span>
-                    </div>
-
-                    <div class="galaxy-scanner-info">
-                        <h4 class="holo-module-title" id="holo-mod-title" data-i18n="galaxy_mod1_title">Планета 1: Компьютер</h4>
-                        <div class="holo-power-banner">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                            </svg>
-                            <span class="holo-module-desc" id="holo-mod-desc" data-i18n="galaxy_mod1_desc">Суперсила: Управляю компьютером как профи!</span>
-                        </div>
-                    </div>
-
-                    <!-- 3 Visual Kid-Friendly Chips with Colorful Icons -->
-                    <div class="holo-skills-box">
-                        <span class="holo-skills-label" data-i18n="galaxy_learned_title">Твоя суперсила на этой планете:</span>
-                        <ul class="holo-skills-list" id="holo-skills-list">
-                            <li class="skill-chip">
-                                <span class="chip-icon-box box-emerald">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                                    </svg>
-                                </span>
-                                <span id="holo-skill-1" data-i18n="galaxy_mod1_i1">Сам включаю и настраиваю ПК</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="chip-icon-box box-amber">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                                    </svg>
-                                </span>
-                                <span id="holo-skill-2" data-i18n="galaxy_mod1_i2">Быстро печатаю без ошибок</span>
-                            </li>
-                            <li class="skill-chip">
-                                <span class="chip-icon-box box-azure">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                                    </svg>
-                                </span>
-                                <span id="holo-skill-3" data-i18n="galaxy_mod1_i3">Безопасно играю в интернете</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Footer with ONE Big, Fun, Glowing CTA Button -->
-                <div class="galaxy-footer-compact">
-                    <button type="button" class="galaxy-cta-btn single-big-btn" id="galaxy-cta-btn" onclick="startGalaxyModule()">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                            <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                        </svg>
-                        <span data-i18n="galaxy_btn_start">Полетели на планету!</span>
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                    <p class="gm-desc" id="holo-mod-desc"></p>
+                    <button type="button" class="gm-cta" id="galaxy-cta-btn" onclick="startGalaxyModule()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                        <span id="gm-cta-text">Полетели на планету!</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                     </button>
                 </div>
-
+                <div class="gm-side">
+                    <h5 class="gm-learn" id="gm-learn">Чему ты научишься:</h5>
+                    <ul class="gm-list" id="holo-skills-list">
+                        <li><span id="holo-skill-1"></span></li>
+                        <li><span id="holo-skill-2"></span></li>
+                        <li><span id="holo-skill-3"></span></li>
+                    </ul>
+                    <div class="gm-stats">
+                        <span><svg viewBox="0 0 24 24"><rect x="3" y="12" width="4.5" height="9" rx="1" fill="#22c1c3"/><rect x="9.8" y="7" width="4.5" height="14" rx="1" fill="#3fd06d"/><rect x="16.5" y="3" width="4.5" height="18" rx="1" fill="#4aa8ff"/></svg><b id="holo-status-tag">21 занятие</b></span>
+                        <span><svg viewBox="0 0 24 24"><path d="M5 19l4-1 9-9a3 3 0 0 0-4-4l-9 9z" fill="#a78bfa"/><circle cx="14" cy="10" r="1.6" fill="#fff"/><path d="M5 19c-1 0-2-1-2-2 1-2 3-2 4-1z" fill="#ff8a3d"/></svg><b id="gm-st-proj">Проекты</b></span>
+                        <span><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6.5" fill="#ffc93a" stroke="#f59e0b" stroke-width="1.5"/><path d="M8.5 14.5L7 22l5-2.6 5 2.6-1.5-7.5z" fill="#ef4444"/><path d="M12 5.5l1.2 2.5 2.7.4-2 1.9.5 2.7-2.4-1.3-2.4 1.3.5-2.7-2-1.9 2.7-.4z" fill="#fff"/></svg><b id="gm-st-cert">Сертификат</b></span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -1913,19 +1815,19 @@
     <script async src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
     <!-- Internationalization & Content Dictionary -->
-    <script src="translations.js?v=20261123-r2"></script>
+    <script src="translations.js?v=20261123-r3"></script>
 
     <!-- Custom Script Engine -->
-    <script src="script.js?v=20261123-r2"></script>
-    <script src="transitions.js?v=20261123-r2"></script>
-    <script src="island-game.js?v=20261123-r2"></script>
-    <script src="maze-drag.js?v=20261123-r2"></script>
-    <script src="course-choice.js?v=20261123-r2"></script>
-    <script src="map-opportunities.js?v=20261123-r2"></script>
-    <script src="team-slide.js?v=20261123-r2"></script>
-    <script src="platform-preview.js?v=20261123-r2"></script>
-    <script src="course-program.js?v=20261123-r2"></script>
-    <script src="perf-prefetch.js?v=20261123-r2"></script>
+    <script src="script.js?v=20261123-r3"></script>
+    <script src="transitions.js?v=20261123-r3"></script>
+    <script src="island-game.js?v=20261123-r3"></script>
+    <script src="maze-drag.js?v=20261123-r3"></script>
+    <script src="course-choice.js?v=20261123-r3"></script>
+    <script src="map-opportunities.js?v=20261123-r3"></script>
+    <script src="team-slide.js?v=20261123-r3"></script>
+    <script src="platform-preview.js?v=20261123-r3"></script>
+    <script src="course-program.js?v=20261123-r3"></script>
+    <script src="perf-prefetch.js?v=20261123-r3"></script>
 </body>
 </html>
 
